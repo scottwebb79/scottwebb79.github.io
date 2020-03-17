@@ -8,7 +8,7 @@
     position: sticky;
     margin: 2px;
 }
-
+/*
 @media screen and (max-width: 600px) {
     .TopNav a{not(:first-child) {display: none;}
     .TopNav.icon {
@@ -17,7 +17,7 @@
     }
      .DashboardImage{width: 45%; height: auto;}
 }
-/*
+
 @media screen and (max-width: 600px) {
     .TopNav.responsive {position: relative;}
     .TopNav.responsive .icon {
