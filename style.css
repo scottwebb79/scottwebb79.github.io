@@ -8,7 +8,13 @@
     position: sticky;
     margin: 2px;
 }
- 
+
+@media screen and (max-width: 600px) {
+    TopNav li.right;
+    TopNav li{float: none;}
+    .DashboardImage{width: 45%; height: auto;}
+}
+
 body {
     background-image: url("Images/Osprey.jpg");
     background-repeat: no-repeat;
