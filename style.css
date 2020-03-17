@@ -10,9 +10,12 @@
 }
 
 @media screen and (max-width: 600px) {
-    TopNav li.right;
-    TopNav li{float: none;}
-    .DashboardImage{width: 45%; height: auto;}
+    .TopNav a{not(:first-child) {display: none;}
+    .TopNav.icon {
+        float: right;
+        display: block;
+    }
+     .DashboardImage{width: 45%; height: auto;}
 }
 
 body {
