@@ -61,7 +61,7 @@ input[type="submit"]:hover {
 }
 
 .avatar {
-    margin: 0;
+    margin-right: 10px;
     position: absolute;
     vertical-align: center;
     top: 50%;
