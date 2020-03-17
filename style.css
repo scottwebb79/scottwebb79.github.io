@@ -41,6 +41,7 @@ form {
     top: 50%;
     transform: translateY(-50%);
     vertical-align: middle;
+    float: right;
 }
 
 .TopNav input[type="submit"] {
@@ -54,7 +55,7 @@ form {
     top: 50%;
     transform: translateY(-50%);
     vertical-align: middle;
-    
+    float: right;
 }
 
 input[type="submit"]:hover {
