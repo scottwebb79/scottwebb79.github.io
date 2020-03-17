@@ -40,6 +40,7 @@ form {
     padding-right: 0px;
     top: 50%;
     transform: translateY(-50%);
+    vertical-align: middle;
 }
 
 .TopNav input[type="submit"] {
@@ -52,12 +53,13 @@ form {
     margin-left: 10px;
     top: 50%;
     transform: translateY(-50%);
+    vertical-align: middle;
     
 }
 
 input[type="submit"]:hover {
     background-color: lightblue;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .avatar {
