@@ -17,7 +17,7 @@
     }
      .DashboardImage{width: 45%; height: auto;}
 }
-
+/*
 @media screen and (max-width: 600px) {
     .TopNav.responsive {position: relative;}
     .TopNav.responsive .icon {
@@ -31,6 +31,8 @@
         text-align: left;
     }
 }
+*/    
+    
 body {
     background-image: url("Images/Osprey.jpg");
     background-repeat: no-repeat;
