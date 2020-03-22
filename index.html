@@ -1,178 +1,224 @@
 <!DOCTYPE html>
+<html>
 
-<html lang="en-US">
-    
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="MACCS Training Information System">
-<meta name="Keywords" content="MACCS,USMC,USMC Aviation">
-<meta name="Author" content="Scott C. Webb">
-<meta name="Viewport" content="width=device-width, initial-scale=1.0">
-    
-<link rel="stylesheet" href="style.css">
 
-<script src="script.js"></script>
-<script src="https://kit.fontawesome.com/0444760839.js" crossorigin="anonymous"></script>
-    
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content=="IE=edge"/>
+<meta name="google" value="notranslate"/>
 <title>MACCS Training Information System</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     
 </head>
-    
 <body>
 
-    <div class="TopNav" id="navbar">
-        <img src="Images/EGA_Nav.png" alt="EGA" style="float: left; padding-top: 4px; padding-left: 8px; width: 45px; height: 45px; display: inline-block;">
-        <ul class="navbar_ul">
-            <li class="dropdown">
-
-<!-- Week 2 Assignment example of inline CSS for <li> using sytle="font-size: 18px;" -->                
-                <a href="javascript:void(0)" style="font-size: 18px;"><strong style="text-shadow: 1px 1px navy">MACCS Training Information System |</strong></a>
-            </li>
-
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Dashboard</a>
-                    <div class="dropdown-content">    
-                        <a href="#">Dashboard</a>
-                        <a href="#">Customize</a>
-                    </div>
-            </li>
-                    
-         <li class="dropdown">
-             <a href="javascript:void(0)" class="dropbtn">Reports</a>
-                 <div class="dropdown-content">
-                     <a href="#">Exercise Report</a>
-                     <a href="#">CMMR</a>
-                     <a href="#">Core Skills</a>
-                     <a href="#">Mission Skills</a>
-                     <a href="#">Credentials</a>
-                     <a href="#">Defincencies</a>
-                 </div>
-         </li>
-                    
-         <li class="dropdown">
-             <a href="javascript:void(0)" class="dropbtn">Administration</a>
-                  <div class="dropdown-content">
-                      <a href="#">Unit Information</a>
-                      <a href="#">User Accounts</a>
-                      <a href="#">Training Records</a>
-                      <a href="#">Manage Credentials</a>
-                      <a href="#">Scope Management</a>
-                      <a href="#">Profile Maintenance</a>
-                  </div>
-         </li>
-                    
-         <li class="dropdown">
-             <a href="javascript:void(0)" class="dropbtn">Calendar</a>
-                 <div class="dropdown-content">
-                     <a href="#">Add Calendar Events</a>
-                     <a href="#">Weekly Calendar</a>
-                     <a href="#">Monthly Calendar</a>
-                     <a href="#">Annual Calendar</a>
-                 </div>
-         </li>
-
-         <li class="dropdown">
-             <a href="javascript:void(0)" class="dropbtn">Help</a>
-             <div class="dropdown-content">
-                  <a href="#">Search Help</a>
-                  <a href="#">Index</a>
-                  <a href="#">About</a>
-             </div>
-         </li>
-   
-          <li class="dropdown">
-              <img src="Images/Profile_Picture.jpg" alt="Profile Picture" class="avatar">
-              <a href="javascript:void(0)" class="dropbtn"></a>
-              <div class="dropdown-content">
-                  <a href="#">View Profile</a>
-                  <a href="#">Manage Profile</a>
-              </div>
-          </li>
-            
-          <li> 
-             <input type="submit" value="Search" style="float: right; padding: 10px 8px 8px 10px; margin-right: 10px;">
-             <input type="text" placeholder="Search..." id="Search_Topic" name="Search_Topic" style="float: right;">
-          </li>
-   
-         </ul>
-   </div>
- 
-    
- <div class="flex-container">
-        
-   <div class="row">
-      <div class="side">
-          
-        <div><h4><b>Dashboard Module Concept Summary</b></h4>
-
-            <section>
-                 <div class="clearfix">
-                     <img class="DashboardImage" src="Images/Dashboard.png" alt="Dashboard" height="300" width="450">
-                            The dashboard module should provide the user with an overview of the proficency of his/her unit scope. If the
-                            user  is a platoon sergeant who is in charge of twelve Marines, then the users dashboard will provide data and 
-                            charts that represents the training of those twelve Marines.  The dashboard should be place where the user is
-                            able to conduct quick analysis of training data and conduct training deficiency diagnostics. Although the
-                            Dashboard does present data in a usable format, it will not be designed to go into depth concerning individual
-                            training records. This should be done within reports. The Dashboard should be contain the units training 
-                            readiness.
-                     <aside>
-                         <ul>
-                             <li>|| CMMR Trends |</li>
-                             <li>| Top Three Marines |</li>
-                             <li>| Top Three Deficiencies ||</li>
-                         </ul>
-                     </aside>
-                </div>
-            </section>     
-        </div>
-      </div>
-   </div>
-          
-       <div><h4><b>Reports</b></h4>
-            <section>    <p>The reports module will allow the user to dive deeper into the database and allow for both common reports as
-                            well as customizable reports. Again, the reports module will be restricted to the users scope. Common reports
-                            consist of CMMR, Unit Roster, Individual crew position prerequisite requirements, Core Skill Proficiency and
-                            Mission Skill Proficiency Reports.</p>
-            </section>
-        
-        </div>
-        <div><h4><b>Administration</b></h4>
-            <section>    <p>Those users with administration privileges will have access for the entry of accomplished training within
-                            their scope. The administration module will also allow tiered administrators to award certifications,
-                            designations and qualifications. Under this module, personnel can be requested and forwarded to another unit,
-                            or even deactivated (as to archieve).</p>
-            </section>
-        </div>
-        <div><h4><b>Calendar</b></h4>
-            <section>    <p> The calendar will allow commands and users alike to schedule training events. Additionally, they will be able
-                             to review their calendars for events and be able to interact. Instructors will be able to approve events as 
-                             well as leadership of the Marine who is requesting an event. Events such as exercises should be maintained 
-                             here. Exercise events should be able to be associated with trainees, and that trainee (once complete) should 
-                             be awarded the training event in their training record. This will be how training is entered into the 
-                             database (at least one way).</p>
-            </section>
-        </div>
-        <div><h4><b>Profile</b></h4>
-            <section>    <p>The user profile should all the user to review information such as: the unit they are assigned, view their
-                            scope, review and update their personal information, and even upload/update a profile picture. Within the
-                            profile module, there will a chat application in which users will be able communicate with each other. This
-                            chat will be logged. Additionally, this is where users will have access to readboards, best practices posts
-                           (similar to a wiki), and allows the users to have somewhat of a social aspect to the information system. As 
-                           users receive credentials, they will receive awards that can be viewed by all. Its a way for them to share 
-                           their accomplishments with the community.</p>
-            </section>
-        </div>
-        <div><h4><b>Help</b></h4>
-            <section>    <p> The help module should contain both a help file and an index for quick reference. The help module should also 
-                             provide intuitive "How To's" for all other modules and sub-modules. This will need to be maintained and 
-                             updated regularly as the Information System evolves.</p>
-            </section>
-        </div>
+    <div class="page-header">
+         <img src="img/EGA_Nav.png" alt="EGA" style="float: left; padding-top: 4px; padding-left: 8px; width: auto; height: 50px; padding-right: 30px; display: inline-block;">
+        <a>Marine Aviation Command and Control System Training Information System</a>
+                <form action="/action_page.php" class="search-container" style="display: inline-block; float:right;">
+                    <input class="input_text" type="text" placeholder="Search..." name="Search">
+                    <button type="submit">Submit   <!-- <i class="fa fa-search"></i>--></button>
+                </form>
     </div>
+        
+<nav class="main-menu">
+  
+    <div>
+        <a class="logo" href="#">
+        </a> 
+    </div> 
 
-<footer>
-    <p>All rights reserved. This site is the intillectual property of Scott C. Webb | ph: (xxx)xxx-xxx |<a href="#">mailto:scottwebb79@gmail.com</a> |<a href="#">Terms of use</a></p>     
-</footer>
+    <div class="settings" style="background-color: #003669;"><span>Semper Fidelis</span></div>
 
+    <div class="scrollbar" id="style-2">
+      
+        <ul>
+  
+            <li>                                 
+                <a href="content/Profile.html">
+                <i class="fa fa-user fa-lg"></i>
+                <span class="nav-text">Profile</span>
+                </a>
+            </li>   
+
+            <li>                                   
+                <a href="#">
+                    <i class="fas fa-chart-bar fa-lg"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>   
+        
+            <li>                                 
+                <a href="#">
+                <i class="fas fa-envelope fa-lg"></i>
+                <span class="nav-text">Messages</span>
+                </a>
+            </li>   
+
+            <li class="darkerlishadow">
+                <a href="#">
+                <i class="fas fa-calendar-alt fa-lg"></i>
+                <span class="nav-text">Calendar</span>
+                </a>
+            </li>
+  
+            <li class="darkerli">
+                <a href="#">
+                <i class="fas fa-folder-open fa-lg"></i>
+                <span class="nav-text">Performance Records</span>
+                </a>
+            </li>
+  
+            <li class="darkerli">
+                <a href="#">
+                <i class="fas fa-database fa-lg"></i>
+                    <span id="nav-text" class="dropbtn" onclick="myFunction()">Data Entry<img src="img/drop_down_arrow.png" style="height: 8px; width: auto; padding-left: 50px; positon: relative">
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Live / Simulated Events</a>
+                        <a href="#">Ground Training Events</a>
+                    </div>
+                    </span>
+                </a>
+            </li>
+  
+            <li class="darkerli">
+                <a href="#">
+                <i class="fas fa-sticky-note fa-lg"></i>
+                <span class="nav-text">Reports</span>
+                </a>
+            </li>
+  
+            <li class="darkerli">
+                <a href="#">
+                <i class="fas fa-user-cog fa-lg"></i>
+                <span class="nav-text">Administration</span>
+                </a>
+            </li>
+
+            <li class="darkerli">
+                <a href="#">
+                <i class="fas fa-trophy fa-lg"></i>
+                <span class="nav-text">Credentials</span>
+                </a>
+             </li>
+  
+             <li class="darkerli">
+                 <a href="#">
+                 <i class="fas fa-road fa-lg"></i>
+                 <span class="nav-text">Exercises &amp; Deployments</span>
+                 </a>
+             </li>
+
+            <li class="darkerli">
+                <a href="#">
+                <i class="fa fa-align-left fa-lg"></i>
+                <span class="nav-text">Unit Information</span>
+                </a>
+             </li>
+  
+            <li class="darkerli">
+                <a href="#">
+                <i class="fas fa-clipboard fa-lg"></i>
+                <span class="nav-text">MCCRE</span>
+                </a>
+            </li>
+  
+            <li class="darkerli">
+                <a href="#">
+                <i class="fa fa-book fa-lg"></i>
+                <span class="nav-text">Publications</span>
+                </a>
+             </li>
+  
+            <li class="darkerlishadowdown">
+                <a href="#">
+                <i class="fas fa-users fa-lg"></i>
+                <span class="nav-text">Forums</span>
+                </a>
+             </li>  
+        </ul>
+
+        <ul>
+            <li>                                   
+                <a href="#">
+                <i class="fas fa-question-circle fa-lg"></i>
+                <span class="nav-text">USER MANUAL</span>
+                </a>
+            </li>   
+        </ul>
+  
+        <ul class="logout">
+            <li>
+                <a href="#">
+                    <i class="fas fa-sign-out-alt fa-lg"></i>
+                    <span class="nav-text">LOGOUT</span>                        
+                    </a>
+            </li>  
+        </ul>
+    </div>    
+</nav>
+    
+<div id="main" style="margin-left: 70px; margin-right: 15px; word-wrap: break-word;">
+    
+        
+    <h1>Profile</h1>
+    <section>
+        <p>The profile will consist of the following:</p>
+        <ul>
+            <li>Profile Picture</li>
+            <li>Rank</li>
+            <li>Name</li>
+            <li>Gender</li>
+            <li>EDIPI</li>
+            <li>Unit Information</li>
+            <li>Contact Number</li>
+            <li>E-Mail</li>
+            <li>Address<li>
+            <li>User Handle</li>
+            <li>Credentials</li>
+            <li>Badgets</li>
+        </ul>
+        <h1>;sakdjf;askjdf;askjdf;alskjf;lasdjf;alskdjf;alskjf;alskjdf;alskjf;alsdjkf;alsjdfa;lskjdf;asldkjfa;sldkjfa;lsjfas;ldjf;asjfa;lskjf;askjf;asldjf;asdkjfa;lskjfa;slkjfa;sljf;alsjfa;lsjf;alsjkfa;lsjf;lsadjf;sljf;asdkjfa;sldjf;asldkjfads;ljfsd;lfjasd;lfjasd;ljfa;lsjfs;aldjfa;sdjfa;lsdjfas;ljfas;kjfas;ljfa;sljfa;lsdjfa;sldjf;saljf;lasdjf;lsjfa;sljfsa;ljfa;lsdjfa;lsdjf;alsdjkf;sadlkfja;slkdjfas;lfja;sdkjfa;lsdjfa;lsdjfa;lskjdf;alsjf;lsdjdf;klasjdf;jaksd;fljkasd;lfkjas;ldjfa;sldjkf;alskdjfa;lsdkjf;alsdkjf;lasdkjfl ;lksdjf;alskjd fsa;ldjkf ;sladjfa;lsdjf as;ldkjf a;sldjf alskdjf ;ldskjfa;lskdjf;lasdkjf as;ldkjf ;lsdjf;adsljf ;ldsjfa;sljf a;lsdkjf a;sldjf as;dlfj ldskf ; fdl jfas;lj f;sldfja;sljf;lakdj f;laskj f;lsaj f;lskdj f;lkasdjf ;lsdjf a;slj f</h1>
+    </section>
+    
+</div>    
+			
+<script>
+    /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+    
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+  
 </body>
 </html>
