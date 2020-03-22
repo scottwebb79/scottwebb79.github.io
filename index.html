@@ -9,14 +9,20 @@
 <title>MACCS Training Information System</title>
 
 <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    
+
+    <!-- Step 1 - Include the fusioncharts core library -->
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <!-- Step 2 - Include the fusion theme -->
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+
+
 </head>
 <body>
 
     <div class="page-header">
-         <img src="img/EGA_Nav.png" alt="EGA" style="padding-top: 4px; padding-left: 8px; width: auto; height: 50px; padding-right: 30px; display: inline-block;">
+         <img src="img/EGA_Nav.png" alt="EGA" style="padding-top: 4px; padding-left: 8px; width: auto; height: 30px; padding-right: 30px; display: inline-block;">
             Marine Aviation Command and Control System Training Information System
                 <form action="/action_page.php" class="search-container" style="display: inline-block;">
                     <input class="input_text" type="text" placeholder="Search..." name="Search">
@@ -24,12 +30,7 @@
                 </form>
     </div>
         
-<nav class="main-menu">
-  
-    <div>
-        <a class="logo" href="#">
-        </a> 
-    </div> 
+<nav class="main-menu"> 
 
     <div class="settings" style="background-color: #003669;"><span>Semper Fidelis</span></div>
 
@@ -160,31 +161,118 @@
         </ul>
     </div>    
 </nav>
-    
-<div id="main" style="margin-left: 70px; margin-right: 15px; word-wrap: break-word; color:black">
-    
-        
-    <h1>Profile</h1>
-    <section>
-        <p>The profile will consist of the following:</p>
-        <ul>
-            <li>Profile Picture</li>
-            <li>Rank</li>
-            <li>Name</li>   
-            <li>Gender</li>
-            <li>EDIPI</li>
-            <li>Unit Information</li>
-            <li>Contact Number</li>
-            <li>E-Mail</li>
-            <li>Address<li>
-            <li>User Handle</li>
-            <li>Credentials</li>
-            <li>Badgets</li>
-        </ul>
-        <h1>;sakdjf;askjdf;askjdf;alskjf;lasdjf;alskdjf;alskjf;alskjdf;alskjf;alsdjkf;alsjdfa;lskjdf;asldkjfa;sldkjfa;lsjfas;ldjf;asjfa;lskjf;askjf;asldjf;asdkjfa;lskjfa;slkjfa;sljf;alsjfa;lsjf;alsjkfa;lsjf;lsadjf;sljf;asdkjfa;sldjf;asldkjfads;ljfsd;lfjasd;lfjasd;ljfa;lsjfs;aldjfa;sdjfa;lsdjfas;ljfas;kjfas;ljfa;sljfa;lsdjfa;sldjf;saljf;lasdjf;lsjfa;sljfsa;ljfa;lsdjfa;lsdjf;alsdjkf;sadlkfja;slkdjfas;lfja;sdkjfa;lsdjfa;lsdjfa;lskjdf;alsjf;lsdjdf;klasjdf;jaksd;fljkasd;lfkjas;ldjfa;sldjkf;alskdjfa;lsdkjf;alsdkjf;lasdkjfl ;lksdjf;alskjd fsa;ldjkf ;sladjfa;lsdjf as;ldkjf a;sldjf alskdjf ;ldskjfa;lskdjf;lasdkjf as;ldkjf ;lsdjf;adsljf ;ldsjfa;sljf a;lsdkjf a;sldjf as;dlfj ldskf ; fdl jfas;lj f;sldfja;sljf;lakdj f;laskj f;lsaj f;lskdj f;lkasdjf ;lsdjf a;slj f</h1>
-    </section>
-    
-</div>    
+
+<div class="row" style="margin-left:80px;">
+    <div class="column">
+        <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
+            <div class="card">
+                <img src="Img/profile_picture.jpg" alt="avatar">
+                <div class="container">
+                    <h4><b><u>Profile</u></b></h4>
+                        <p>Purpose: Users will have access to a profile page that allows them to review their personal information as well as achievements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
+            <div class="card">
+                <img src="Img/dashboard.png" alt="dashboard">
+                <div class="container">
+                    <h4><b><u>Dashboard</u></b></h4>
+                         <p>Purpose: Users will have a default, yet customizable, dashboard that will provide statistical data relating to the personnel within the users scope.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
+            <div class="card">
+                <img src="Img/messages.jpg" alt="messages">
+                <div class="container">
+                    <h4><b><u>Message Center</u></b></h4>
+                    <p>Purpose: Each user will have an message center that will allow them to send and receive global E-Mails. In addition, this module will allow them to instant message amongst those who are logged on. If the receiving user is not online, the message will be waiting for them the next time they log on.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
+            <div class="card">
+               <img src="Img/calendar.jpg" alt="messages">
+                <div class="container">
+                    <h4><b><u>Calendar</u></b></h4>
+                    <p>Purpose: The calendar will allow user to schedule events, invite others to attend, and for administrators to schedule training and assign students to the training event. Notifications will be sent to users who are assigned to a training event.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+const dataSource = {
+    chart: {
+      caption: "Countries With Most Oil Reserves [2017-18]",
+      subcaption: "In MMbbl = One Million barrels",
+      xaxisname: "Country",
+      yaxisname: "Reserves (MMbbl)",
+      numbersuffix: "K",
+      theme: "fusion"
+    },
+    data: [
+      {
+        label: "Venezuela",
+        value: "290"
+      },
+      {
+        label: "Saudi",
+        value: "260"
+      },
+      {
+        label: "Canada",
+        value: "180"
+      },
+      {
+        label: "Iran",
+        value: "140"
+      },
+      {
+        label: "Russia",
+        value: "115"
+      },
+      {
+        label: "UAE",
+        value: "100"
+      },
+      {
+        label: "US",
+        value: "30"
+      },
+      {
+        label: "China",
+        value: "30"
+      }
+    ]
+  };
+  
+  FusionCharts.ready(function() {
+    var myChart = new FusionCharts({
+      type: "column2d",
+      renderAt: "chart-container",
+      width: "100%",
+      height: "100%",
+      dataFormat: "json",
+      dataSource
+    }).render();
+  });
+</script>
+
+
+
 			
 <script>
     /* When the user clicks on the button, 
@@ -208,17 +296,5 @@ window.onclick = function(event) {
 }
 </script>
     
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-  
-</body>
+  </body>
 </html>
