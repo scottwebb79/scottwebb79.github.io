@@ -12,33 +12,29 @@ body
 
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-}
 @import url(/use.fontawesome.com/releases/v5.12.1/css/all.css);
-}
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
-}
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap');
-}
+@import url(https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap);
 
 div.sticky {
     position: web-kit-sticky;
     position: absolute;
 }
     
+
 .page-header {
     z-index: 1;
     position: sticky;
     position: web-kit-sticky;
-    float: left;
     display: inline-block;
-    background-image: linear-gradient(to bottom, lightskyblue, steelblue);
+    background-color: steelblue;
+    background-image: linear-gradient(to bottom, lightskyblue,#003669);
     font-family: 'Open Sans', cursive;
     font-size: 24px;
     top: 0;
     margin-top: -22px;
+    width: 100%;
     padding: 0px;
-    background: webkit-linear-gradient(LightSkyBlue, Navy);
-    -webkit-background-clip: text;
     text-shadow:
      -1px -1px 0 SteelBlue,  
       1px -1px 0 SteelBlue,
@@ -88,10 +84,6 @@ div.sticky {
     input[type=text] {
         border: 1px solid #ccc;
     }
-}
-
-.logo {
-  
 }
 
 .settings {
@@ -151,6 +143,7 @@ background-color: #F7F7F7;
 {
 border-radius: 10px;
 -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 background-color: #BFBFBF;
 }
 /* Scrollbar End */ 
@@ -195,6 +188,7 @@ overflow:hidden;
 -webkit-transition:width .2s linear;
 transition:width .2s linear;
 -webkit-transform:translateZ(1) scale(1,1);
+transform:translateZ(1) scale (1,1);
 box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
   opacity:1;
 }
@@ -220,6 +214,7 @@ color:#8a8a8a;
 font-size: 13px;
 text-decoration:none;
 -webkit-transform:translateZ(0) scale(1,1);
+transform:translateZ(0) scale(1,1);
 -webkit-transition:all .14s linear;
 transition:all .14s linear;
 font-family: 'Strait', sans-serif;
@@ -256,11 +251,6 @@ vertical-align:middle;
 width:190px;
 font-family: 'Titillium Web', sans-serif;
 }
-
-.main-menu .share {
-}
-
-
 
 .main-menu .fb-like {
 
