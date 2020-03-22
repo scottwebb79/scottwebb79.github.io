@@ -1,39 +1,27 @@
-body
-{
-  margin:0px;
-  padding:0px;
-  font-family: "Open Sans", arial;
-  background-image: url("body-background.jpg");
-  background-size: cover;
-  color:#fff;
-  font-weight:300;
-
-}
-
-
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 @import url(/use.fontawesome.com/releases/v5.12.1/css/all.css);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 @import url(https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap);
 
-div.sticky {
-    position: web-kit-sticky;
-    position: absolute;
-}
-    
-
+body {
+    margin:0px;
+    padding:0px;
+    font-family: "Open Sans", arial;
+    background-image: url("Img/background.jpg");
+    background-size: cover;
+    color:#fff;
+    font-weight:300;
+}    
 .page-header {
-    z-index: 1;
+    z-index: 2;
     position: sticky;
     position: web-kit-sticky;
-    display: inline-block;
+    display: inline=block;
     background-color: steelblue;
     background-image: linear-gradient(to bottom, lightskyblue,#003669);
     font-family: 'Open Sans', cursive;
-    font-size: 24px;
+    font-size: 24px; 
     top: 0;
-    margin-top: -22px;
-    width: 100%;
     padding: 0px;
     text-shadow:
      -1px -1px 0 SteelBlue,  
@@ -82,15 +70,14 @@ div.sticky {
     }
 
     input[type=text] {
-        border: 1px solid #ccc;
+        border: 1px solid rgb(196, 196, 196);
     }
 }
 
-.settings {
+.settings { 
   
-  height:73px; 
+  height:75px; 
   float:left;
-  background:url( https://s3.postimg.org/bqfooag4z/startific.jpg);
   background-repeat:no-repeat;
   width:250px;
   margin:0px;
@@ -99,11 +86,6 @@ font-size:20px;
 font-family: 'Strait', sans-serif;
 
 }
-
-
-
-
-
 
 /* ScrolBar  */
 .scrollbar
@@ -115,36 +97,29 @@ overflow-y: hidden;
 overflow-x: hidden;
 }
 
-.scrollbar:hover
-{
-
-height: 90%;
-width: 100%;
-overflow-y: scroll;
-overflow-x: hidden;
+.scrollbar:hover {
+    height: 90%;
+    width: thin;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /* Scrollbar Style */ 
 
-
-
-#style-1::-webkit-scrollbar-track
-{
-border-radius: 2px;
+#style-1::-webkit-scrollbar-track {
+    border-radius: 2px;
 }
 
-#style-1::-webkit-scrollbar
-{
-width: 5px;
-background-color: #F7F7F7;
+#style-1::-webkit-scrollbar {
+    width: 3px;
+    background-color: #F7F7F7;
 }
 
-#style-1::-webkit-scrollbar-thumb
-{
-border-radius: 10px;
--webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-background-color: #BFBFBF;
+#style-1::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #BFBFBF;
 }
 /* Scrollbar End */ 
 
@@ -166,8 +141,6 @@ font-size:20px;
 
 }
 
-
-
 .main-menu:hover, nav.main-menu.expanded {
 width:250px;
 overflow:hidden;
@@ -175,12 +148,18 @@ opacity: 1;
 
 }
 
+#chart-container {
+    float: right;
+    width: 40%;
+    height: auto;
+    margin-right: 10px;
+}
 .main-menu {
 background:#F7F7F7;
 position:fixed;
 top:0;
 bottom:0;
-height:100%;
+height: auto;
 left:0;
 width:55px;
 height: 100%;
@@ -426,3 +405,61 @@ dropbtn {
 }
 
 .show {display: block;}
+
+.card {
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.9);
+    transition: 0.3s;
+    width: 100%;
+    height: 450px;
+    margin-left: 80px;
+    border-radius: 5px;
+    border-color: 1px solid steelblue;
+    background-color: white;
+    color: black;
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}
+.card p {
+    font-size: 12px;
+    text-align: center;
+    margin: 3px;
+    text-align: left;
+}
+.card h4 {
+    font-size: 14px;
+    text-align: center;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+.column {
+    float: left;
+    width:20%;
+    padding: 10px;
+    height: 300px;
+}
+
+.row:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
