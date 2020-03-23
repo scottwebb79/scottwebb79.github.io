@@ -3,298 +3,250 @@
 
 <head>
 
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="google" value="notranslate"/>
-<title>MACCS Training Information System</title>
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="MACCS, USMC, USMC Aviation"/>
+    <meta name="Author" content="Scott C. Webb"/>
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0"/>
 
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <title>MACCS Training Information System</title>
 
-    <!-- Step 1 - Include the fusioncharts core library -->
-    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
-    <!-- Step 2 - Include the fusion theme -->
-    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap">
 
 </head>
+
 <body>
+    
+    <header class="page-header" id="myHeader">
+        <img src="img/EGA_Nav.png" alt="EGA"/>
+        Marine Aviation Command and Control System Training Information System
+    </header>
 
-    <div class="page-header">
-         <img src="Images/EGA_Nav.png" alt="EGA" style="padding-top: 4px; padding-left: 8px; width: auto; height: 30px; padding-right: 30px; display: inline-block;">
-            Marine Aviation Command and Control System Training Information System
-                <form action="/action_page.php" class="search-container" style="display: inline-block;">
-                    <input class="input_text" type="text" placeholder="Search..." name="Search">
-                    <button type="submit">Submit   <!-- <i class="fa fa-search"></i>--></button>
-                </form>
-    </div>
-        
-<nav class="main-menu"> 
-
-    <div class="settings" style="background-color: #003669;"><span>Semper Fidelis</span></div>
-
-    <div class="scrollbar" id="style-2">
-      
-        <ul>
-  
-            <li>                                 
-                <a href="content/Profile.html">
+<nav>
+    <div class="sidenav">
+        <div>
+            <a href="content/Profile.html">
                 <i class="fa fa-user fa-lg"></i>
-                <span class="nav-text">Profile</span>
-                </a>
-            </li>   
+                Profile
+            </a>
+        </div>
 
-            <li>                                   
-                <a href="#">
-                    <i class="fas fa-chart-bar fa-lg"></i>
-                    <span class="nav-text">Dashboard</span>
-                </a>
-            </li>   
-        
-            <li>                                 
-                <a href="#">
+        <div>
+            <a href="#">
+                <i class="fas fa-chart-bar fa-lg"></i>
+                Dashboard
+            </a>
+        </div>
+
+        <div class="navbartopgradient">
+            <a href="#">
                 <i class="fas fa-envelope fa-lg"></i>
-                <span class="nav-text">Messages</span>
-                </a>
-            </li>   
+                Messages
+            </a>
+        </div>
 
-            <li class="darkerlishadow">
-                <a href="#">
+        <div class="navbardarkerli">
+             <a href="#">
                 <i class="fas fa-calendar-alt fa-lg"></i>
-                <span class="nav-text">Calendar</span>
-                </a>
-            </li>
-  
-            <li class="darkerli">
-                <a href="#">
+                Calendar
+            </a>
+        </div>
+
+        <div class="navbardarkerli">
+            <a href="#">
                 <i class="fas fa-folder-open fa-lg"></i>
-                <span class="nav-text">Performance Records</span>
-                </a>
-            </li>
-  
-            <li class="darkerli">
-                <a href="#">
-                <i class="fas fa-database fa-lg"></i>
-                    <span id="nav-text" class="dropbtn" onclick="myFunction()">Data Entry
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#">Live / Simulated Events</a>
-                        <a href="#">Ground Training Events</a>
-                    </div>
-                    </span>
-                </a>
-            </li>
-  
-            <li class="darkerli">
-                <a href="#">
-                <i class="fas fa-sticky-note fa-lg"></i>
-                <span class="nav-text">Reports</span>
-                </a>
-            </li>
-  
-            <li class="darkerli">
-                <a href="#">
+                Performance Records
+            </a>
+        </div>
+    
+        <div class="navbardarkerli">
+            <button class="dropdown-btn" style="margin-left: 16px; margin-top: 8px;"><i class="fas fa-database fa-lg"></i> Data Entry
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Live or Simulated</a>
+                <a href="#">Ground Training</a>
+            </div>
+        </div>
+
+        <div class="navbardarkerli">
+            <button class="dropdown-btn" style="margin-left: 16px; margin-top: 12px"><i class="fas fa-sticky-note fa-lg" style=" margin-bottom: 6px"></i> Reports
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">CMMR Report</a>
+                <a href="#">Combat Leaders</a>
+                <a href="#">Qualifications</a>
+                <a href="#">Designations</a>
+                <a href="#">Skills</a>
+                <a href="#">DRRS Training</a>
+                <a href="#">Custom</a>
+            </div>
+        </div>
+
+        <div class="navbardarkerli">
+            <a href="#">
                 <i class="fas fa-user-cog fa-lg"></i>
-                <span class="nav-text">Administration</span>
-                </a>
-            </li>
+                Administration
+            </a>
+        </div>
 
-            <li class="darkerli">
-                <a href="#">
+        <div class="navbardarkerli">
+            <a href="#">
                 <i class="fas fa-trophy fa-lg"></i>
-                <span class="nav-text">Credentials</span>
-                </a>
-             </li>
-  
-             <li class="darkerli">
-                 <a href="#">
-                 <i class="fas fa-road fa-lg"></i>
-                 <span class="nav-text">Exercises &amp; Deployments</span>
-                 </a>
-             </li>
+                Credentials
+            </a>
+        </div>
 
-            <li class="darkerli">
-                <a href="#">
+        <div class="navbardarkerli">
+            <a href="#">
+            <i class="fas fa-road fa-lg"></i>
+                Exercises &amp; Deployments
+            </a>
+        </div>
+
+        <div class="navbardarkerli">
+            <a href="#">
                 <i class="fa fa-align-left fa-lg"></i>
-                <span class="nav-text">Unit Information</span>
-                </a>
-             </li>
-  
-            <li class="darkerli">
-                <a href="#">
-                <i class="fas fa-clipboard fa-lg"></i>
-                <span class="nav-text">MCCRE</span>
-                </a>
-            </li>
-  
-            <li class="darkerli">
-                <a href="#">
-                <i class="fa fa-book fa-lg"></i>
-                <span class="nav-text">Publications</span>
-                </a>
-             </li>
-  
-            <li class="darkerlishadowdown">
-                <a href="#">
-                <i class="fas fa-users fa-lg"></i>
-                <span class="nav-text">Forums</span>
-                </a>
-             </li>  
-        </ul>
+                Unit Information
+            </a>
+        </div>
 
-        <ul>
-            <li>                                   
-                <a href="#">
+        <div class="navbardarkerli">
+            <a href="#">
+                <i class="fas fa-clipboard fa-lg"></i>
+                MCCRE
+            </a>
+        </div>
+
+        <div class="navbardarkerli">
+            <a href="#">
+                <i class="fa fa-book fa-lg"></i>
+                Publications
+            </a>
+        </div>
+
+        <div class="navbardarkerli">
+            <a href="#">
+                <i class="fas fa-users fa-lg"></i>
+                Forums
+            </a>
+        </div>
+
+        <div class="navbarbottomgradient">
+            <a href="#">
                 <i class="fas fa-question-circle fa-lg"></i>
-                <span class="nav-text">USER MANUAL</span>
-                </a>
-            </li>   
-        </ul>
-  
-        <ul class="logout">
-            <li>
-                <a href="#">
-                    <i class="fas fa-sign-out-alt fa-lg"></i>
-                    <span class="nav-text">LOGOUT</span>                        
-                    </a>
-            </li>  
-        </ul>
-    </div>    
+                USER MANUAL
+            </a>
+        </div>
+
+        <div>
+            <a href="#">
+                <i class="fas fa-sign-out-alt fa-lg"></i>
+                LOGOUT
+            </a>
+        </div>
+    
+    </div>
 </nav>
 
-<div class="row" style="margin-left:80px;">
-    <div class="column">
-        <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
-            <div class="card">
-                <img src="Img/Profile_Picture.jpg" alt="avatar">
-                <div class="container">
-                    <h4><b><u>Profile</u></b></h4>
-                        <p>Purpose: Users will have access to a profile page that allows them to review their personal information as well as achievements.</p>
+<main class="main">
+    <div class="row" style="margin-left:80px;">
+        <div class="column">
+            <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
+                <div class="card">
+                    <img src="Img/profile_picture.jpg" alt="avatar">
+                    <div class="container">
+                        <h4><b><u>Profile</u></b></h4>
+                        <p>Purpose: Users will have access to a profile page that allows them to review their personal
+                            information as well as achievements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
+                <div class="card">
+                    <img src="Img/dashboard.png" alt="dashboard">
+                    <div class="container">
+                        <h4><b><u>Dashboard</u></b></h4>
+                        <p>Purpose: Users will have a default, yet customizable, dashboard that will provide statistical
+                            data relating to the personnel within the users scope.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
+                <div class="card">
+                    <img src="Img/messages.jpg" alt="messages">
+                    <div class="container">
+                        <h4><b><u>Message Center</u></b></h4>
+                        <p>Purpose: Each user will have an message center that will allow them to send and receive
+                            global E-Mails. In addition, this module will allow them to instant message amongst those
+                            who are logged on. If the receiving user is not online, the message will be waiting for them
+                            the next time they log on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
+                <div class="card">
+                    <img src="Img/calendar.jpg" alt="messages">
+                    <div class="container-bottom">
+                    </div>
+                    <div class="container">
+                        <h4><b><u>Calendar</u></b></h4>
+                        <p>Purpose: The calendar will allow user to schedule events, invite others to attend, and for
+                            administrators to schedule training and assign students to the training event. Notifications
+                            will be sent to users who are assigned to a training event.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="column">
-        <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
-            <div class="card">
-                <img src="Img/dashboard.png" alt="dashboard">
-                <div class="container">
-                    <h4><b><u>Dashboard</u></b></h4>
-                         <p>Purpose: Users will have a default, yet customizable, dashboard that will provide statistical data relating to the personnel within the users scope.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="column">
-        <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
-            <div class="card">
-                <img src="Img/messages.jpg" alt="messages">
-                <div class="container">
-                    <h4><b><u>Message Center</u></b></h4>
-                    <p>Purpose: Each user will have an message center that will allow them to send and receive global E-Mails. In addition, this module will allow them to instant message amongst those who are logged on. If the receiving user is not online, the message will be waiting for them the next time they log on.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="column">
-        <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
-            <div class="card">
-               <img src="Img/calendar.jpg" alt="messages">
-                <div class="container">
-                    <h4><b><u>Calendar</u></b></h4>
-                    <p>Purpose: The calendar will allow user to schedule events, invite others to attend, and for administrators to schedule training and assign students to the training event. Notifications will be sent to users who are assigned to a training event.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+</main>
+-->
 <script>
-
-const dataSource = {
-    chart: {
-      caption: "Countries With Most Oil Reserves [2017-18]",
-      subcaption: "In MMbbl = One Million barrels",
-      xaxisname: "Country",
-      yaxisname: "Reserves (MMbbl)",
-      numbersuffix: "K",
-      theme: "fusion"
-    },
-    data: [
-      {
-        label: "Venezuela",
-        value: "290"
-      },
-      {
-        label: "Saudi",
-        value: "260"
-      },
-      {
-        label: "Canada",
-        value: "180"
-      },
-      {
-        label: "Iran",
-        value: "140"
-      },
-      {
-        label: "Russia",
-        value: "115"
-      },
-      {
-        label: "UAE",
-        value: "100"
-      },
-      {
-        label: "US",
-        value: "30"
-      },
-      {
-        label: "China",
-        value: "30"
-      }
-    ]
-  };
-  
-  FusionCharts.ready(function() {
-    var myChart = new FusionCharts({
-      type: "column2d",
-      renderAt: "chart-container",
-      width: "100%",
-      height: "100%",
-      dataFormat: "json",
-      dataSource
-    }).render();
-  });
-</script>
-
-
-
-			
-<script>
-    /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
       }
     }
-  }
-}
-</script>
-    
-  </body>
+    </script>
+
+
+
+</body>
+
 </html>
