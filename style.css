@@ -60,7 +60,7 @@ body {
     z-index: 0;
     top: 0px;
     left: 0px;
-    background-color: #f1f1f1;
+    background-color: #f2f2f2;
     overflow-x: hidden;
     padding-top: 80px;
     list-style: none;
@@ -86,7 +86,6 @@ body {
     color: #f1f1f1;
 }
 
-
 .dropdown-btn {
     display: inline-block;
     margin-left: 0;
@@ -109,7 +108,9 @@ body {
 }
 
 .navbartopgradient {
-    border-bottom: inset;
+    border-bottom: 2px solid rgb(199, 199, 199);
+    padding: 10px;
+    border-bottom-right-radius: 50px 25px;
 }
 
 .navbardarkerli {
@@ -181,8 +182,6 @@ body {
 	background: rgba(0, 0, 0, 0.8);
 	z-index: 99999;
 	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
 }
@@ -193,7 +192,7 @@ body {
 }
 
 .modalDialog > div {
-	width: 400px;
+	width: 800px;
 	position: relative;
 	margin: 10% auto;
 	padding: 5px 20px 13px 20px;
@@ -213,11 +212,7 @@ body {
 	width: 24px;
 	text-decoration: none;
 	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
 	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
 	box-shadow: 1px 1px 3px #000;
 }
 
