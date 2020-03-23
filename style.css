@@ -158,10 +158,9 @@ body {
     float: left;
     width: 25%;
     padding: 4px;
-    height: 300px; /* Should be removed. Only for demonstration */
+    height: 300px;
   }
-  
-  /* Clear floats after the columns */
+
   .row:after {
     content: "";
     display: table;
@@ -171,3 +170,39 @@ body {
   .container h4 {
       text-align: center;
   }
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+      border-radius: 6px;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
