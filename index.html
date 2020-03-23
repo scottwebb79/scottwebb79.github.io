@@ -65,11 +65,9 @@
                 <i class="fas fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
-                <button id="myBtn">Live or Simulated</button>
-                    <div id="myModal" class="modal">
-                        <span class="close">&times;</span>
-                            <p>Place the form here for data entry for Live and Simulated Events</p>
-                    </div>
+
+                <a href="#openModal">Live and/or Simulated</a>
+
                 <a href="#">Ground Training</a>
             </div>
         </div>
@@ -156,6 +154,29 @@
 </nav>
 
 <main class="main">
+
+    <div id="openModal" class="modalDialog">
+        <div>
+            <a href="#close" title="close" class="close">X</a>
+            <h2>Live and/or Simulated Event Data Entry</h2>
+            <p> The purpose of this modal is to allow the user to input training events. There will be a form that allows the user to interact. Fields will include:</p>
+            <ul>
+                <li>Syllabus</li>
+                <li>Trainee</li>
+                <li>Trainer</li>
+                <li>Environment</li>
+                <li>Conditions</li>
+                <li>Event Codes with Unsat - 5 Rating</li>
+                <li>Trainee Comments</li>
+                <li>Instructor Comments</li>
+            </ul>
+            <p>The data entered here will be stored on the backend and tied directly to the trainee as well as the trainer.</p>
+        </div>
+    </div>
+
+
+
+
     <div class="row" style="margin-left:80px;">
         <div class="column">
             <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
@@ -249,34 +270,6 @@
     }
 </script>
 
-<!--Script for the popup modal for data entry-->
-<script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    </script>
 </body>
 
 </html>
