@@ -155,63 +155,7 @@
 <main class="main">
 
     <div id="openModal" class="modalDialog">
-        <div>
-            <a href="#close" title="close" class="close">X</a>
-            <div class="container">
-                <form action="/action_page.php">
-                <div class="row">
-                  <div class="col-25">
-                    <label for="fname">First Name</label>
-                  </div>
-                  <div class="col-75">
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-25">
-                    <label for="lname">Last Name</label>
-                  </div>
-                  <div class="col-75">
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-25">
-                    <label for="country">Country</label>
-                  </div>
-                  <div class="col-75">
-                    <select id="country" name="country">
-                      <option value="australia">Australia</option>
-                      <option value="canada">Canada</option>
-                      <option value="usa">USA</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-25">
-                    <label for="subject">Subject</label>
-                  </div>
-                  <div class="col-75">
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                  </div>
-                </div>
-                <div class="row">
-                  <input type="submit" value="Submit">
-                </div>
-                </form>
-              </div>
-
-
-
-
-
-
-
-
-
-
-
-            <h2>Live and/or Simulated Event Data Entry</h2>
+        <h2>Live and/or Simulated Event Data Entry</h2>
             <p> The purpose of this modal is to allow the user to input training events. There will be a form that allows the user to interact. Fields will include:</p>
             <ul>
                 <li>Syllabus</li>
@@ -224,17 +168,13 @@
                 <li>Instructor Comments</li>
             </ul>
             <p>The data entered here will be stored on the backend and tied directly to the trainee as well as the trainer.</p>
-        </div>
     </div>
-
-
-
 
     <div class="row" style="margin-left:80px;">
         <div class="column">
             <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
                 <div class="card">
-                    <img src="Img/Profile_Picture.jpg" alt="avatar">
+                    <img src="Img/Profile_Picture.jpg" alt="avatar" style="-ms-transform: rotate(15deg); transform: rotate(15deg); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
                     <div class="container">
                         <h4><b><u>Profile</u></b></h4>
                         <p>Purpose: Users will have access to a profile page that allows them to review their personal
@@ -274,22 +214,12 @@
 
         <div class="column">
             <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
-                <div class="card">
-                    <img src="Img/calendar.jpg" alt="messages">
-                    <div class="container-bottom">
-                    </div>
-                    <div class="container">
-                        <h4><b><u>Calendar</u></b></h4>
-                        <p>Purpose: The calendar will allow user to schedule events, invite others to attend, and for
-                            administrators to schedule training and assign students to the training event. Notifications
-                            will be sent to users who are assigned to a training event.</p>
-                    </div>
+                    <textarea>Please leave your remarks here!</textarea>
                 </div>
             </div>
         </div>
-    </div>
 </main>
--->
+
 <script>
     /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
     var dropdown = document.getElementsByClassName("dropdown-btn");
