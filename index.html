@@ -18,49 +18,50 @@
 <body>
     
     <header class="page-header" id="myHeader">
-        <img src="Img/EGA_Nav.png" alt="EGA"/>
+        <a href="pages/initial.html" target="body_iframe"><img src="Img/EGA_Nav.png" alt="EGA"/></a>
         Marine Aviation Command and Control System Training Information System
     </header>
 
 <nav>
-    <div class="sidenav">
+    <div class="sidenav" id="nav-transition">
         <div>
-            <a href="content/Profile.html">
+            <a href="pages/Profile.html" target="body_iframe">
                 <i class="fa fa-user fa-lg"></i>
-                Profile
+                <span class="nav-text">Profile</span>
             </a>
         </div>
 
         <div>
             <a href="#">
                 <i class="fas fa-chart-bar fa-lg"></i>
-                Dashboard
+                <span class="nav-text">Dashboard</span>
             </a>
         </div>
 
         <div class="navbartopgradient">
             <a href="#">
                 <i class="fas fa-envelope fa-lg"></i>
-                Messages
+                <span class="nav-text">Messages</span>
             </a>
         </div>
 
         <div class="navbardarkerli">
              <a href="#">
                 <i class="fas fa-calendar-alt fa-lg"></i>
-                Calendar
+                <span class="nav-text">Calendar</span>
             </a>
         </div>
 
         <div class="navbardarkerli">
             <a href="#">
                 <i class="fas fa-folder-open fa-lg"></i>
-                Performance Records
+                <span class="nav-text">Performance Records</span>
             </a>
         </div>
     
         <div class="navbardarkerli">
-            <button class="dropdown-btn" id=myModal style="margin-left: 16px; margin-top: 8px;"><i class="fas fa-database fa-lg"></i> Data Entry
+            <button class="dropdown-btn" id=myModal style="margin-left: 16px; margin-top: 8px;"><i class="fas fa-database fa-lg"></i>
+                <span class="nav-text">Data Entry</span>
                 <i class="fas fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
@@ -72,7 +73,8 @@
         </div>
 
         <div class="navbardarkerli">
-            <button class="dropdown-btn" style="margin-left: 16px; margin-top: 12px"><i class="fas fa-sticky-note fa-lg" style=" margin-bottom: 6px"></i> Reports
+            <button class="dropdown-btn" style="margin-left: 16px; margin-top: 12px"><i class="fas fa-sticky-note fa-lg" style=" margin-bottom: 6px"></i>
+                <span class="nav-text">Reports</span>
                 <i class="fas fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
@@ -89,49 +91,49 @@
         <div class="navbardarkerli">
             <a href="#">
                 <i class="fas fa-user-cog fa-lg"></i>
-                Administration
+                <span class="nav-text">Administration</span>
             </a>
         </div>
 
         <div class="navbardarkerli">
             <a href="#">
                 <i class="fas fa-trophy fa-lg"></i>
-                Credentials
+                <span class="nav-text">Credentials</span>
             </a>
         </div>
 
         <div class="navbardarkerli">
             <a href="#">
             <i class="fas fa-road fa-lg"></i>
-                Exercises &amp; Deployments
+                <span class="nav-text">Exercises &amp; Deployments</span>
             </a>
         </div>
 
         <div class="navbardarkerli">
             <a href="#">
                 <i class="fa fa-align-left fa-lg"></i>
-                Unit Information
+                <span class="nav-text">Unit Information</span>
             </a>
         </div>
 
         <div class="navbardarkerli">
             <a href="#">
                 <i class="fas fa-clipboard fa-lg"></i>
-                MCCRE
+                <span class="nav-text">MCCRE</span>
             </a>
         </div>
 
         <div class="navbardarkerli">
             <a href="#">
                 <i class="fa fa-book fa-lg"></i>
-                Publications
+                <span class="nav-text">Publications</span>
             </a>
         </div>
 
         <div class="navbardarkerli">
             <a href="#">
                 <i class="fas fa-users fa-lg"></i>
-                Forums
+                <span class="nav-text">Forums</span>
             </a>
         </div>
 
@@ -152,107 +154,9 @@
     </div>
 </nav>
 
-<main class="main">
-
-    <div id="openModal" class="modalDialog">
-        <h2>Live and/or Simulated Event Data Entry</h2>
-            <p> The purpose of this modal is to allow the user to input training events. There will be a form that allows the user to interact. Fields will include:</p>
-            <ul>
-                <li>Syllabus</li>
-                <li>Trainee</li>
-                <li>Trainer</li>
-                <li>Environment</li>
-                <li>Conditions</li>
-                <li>Event Codes with Unsat - 5 Rating</li>
-                <li>Trainee Comments</li>
-                <li>Instructor Comments</li>
-            </ul>
-            <p>The data entered here will be stored on the backend and tied directly to the trainee as well as the trainer.</p>
-    </div>
-
-    <div class="row" style="margin-left:80px;">
-        <div class="column">
-            <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
-                <div class="card">
-                    <img src="Img/Profile_Picture.jpg" alt="avatar" style="-ms-transform: rotate(15deg); transform: rotate(15deg); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
-                    <div class="container">
-                        <h4><b><u>Profile</u></b></h4>
-                        <p>Purpose: Users will have access to a profile page that allows them to review their personal
-                            information as well as achievements.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
-                <div class="card">
-                    <img src="Img/dashboard.png" alt="dashboard">
-                    <div class="container">
-                        <h4><b><u>Dashboard</u></b></h4>
-                        <p>Purpose: Users will have a default, yet customizable, dashboard that will provide statistical
-                            data relating to the personnel within the users scope.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
-                <div class="card">
-                    <img src="Img/messages.jpg" alt="messages">
-                    <div class="container">
-                        <h4><b><u>Message Center</u></b></h4>
-                        <p>Purpose: Each user will have an message center that will allow them to send and receive
-                            global E-Mails. In addition, this module will allow them to instant message amongst those
-                            who are logged on. If the receiving user is not online, the message will be waiting for them
-                            the next time they log on.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="body-main" style="margin-right: 15px; word-wrap: break-word; color:black">
-                    <textarea>Please leave your remarks here!</textarea>
-                </div>
-            </div>
-        </div>
-</main>
-
-<script>
-    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-    
-    for (i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var dropdownContent = this.nextElementSibling;
-      if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-      } else {
-      dropdownContent.style.display = "block";
-      }
-      });
-    }
-</script>
-<!-- Ensure the header stays sticky-->
-<script>
-    window.onscroll = function() {myFunction()};
-    
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
-    
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    }
-</script>
-
+<div id="iframe_transition">
+    <iframe src="pages/initial.html" name="body_iframe" class="body_iframe" id="iframe_transition"></iframe>
+</div>
 </body>
 
 </html>
