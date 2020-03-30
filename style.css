@@ -111,8 +111,9 @@ button:hover {
 
 .dropdown-button {
     border: none;
-    margin-left: 16px;
-    margin-top: 12px;
+    margin-left: 14px;
+    margin-top: 14px;
+    margin-bottom: 12px;
 }
 
 .dropdown-container {
@@ -124,7 +125,7 @@ button:hover {
 }
 
 .dropdown-btn, #nav-icon {
-    margin-left: 10px;
+    margin-left: 7px;
 }
 
 .sidenav a:hover {
