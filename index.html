@@ -59,25 +59,32 @@
             </a>
         </div>
     
+
+
+
         <div class="navbardarkerli">
-            <button class="dropdown-btn" id=myModal style="margin-left: 16px; margin-top: 8px;"><i class="fas fa-database fa-lg"></i>
-                <span class="nav-text">Data Entry</span>
-                <i class="fas fa-caret-down"></i>
+            <button onclick="myFunction()" class="dropdown-btn"><i class="fas fa-database fa-lg" id="nav-icon"></i>
+                <span class="nav-text">Data Entry
+                <i class="fas fa-caret-down" id="caret-down"></i>
+                </span>
             </button>
-            <div class="dropdown-container">
-
+            <div id="myDropdown" class="dropdown-container">
                 <a href="#openModal">Live and/or Simulated</a>
-
                 <a href="#">Ground Training</a>
             </div>
         </div>
 
-        <div class="navbardarkerli">
-            <button class="dropdown-btn" style="margin-left: 16px; margin-top: 12px"><i class="fas fa-sticky-note fa-lg" style=" margin-bottom: 6px"></i>
+
+
+
+
+
+       <div class="navbardarkerli">
+            <button class="dropdown-btn"><i class="fas fa-sticky-note fa-lg" style=" margin-bottom: 6px"></i>
                 <span class="nav-text">Reports</span>
-                <i class="fas fa-caret-down"></i>
+                <i class="fas fa-caret-down" id="caret-down"></i>
             </button>
-            <div class="dropdown-container">
+            <div id="myDropdown" class="dropdown-container">
                 <a href="#">CMMR Report</a>
                 <a href="#">Combat Leaders</a>
                 <a href="#">Qualifications</a>
@@ -140,14 +147,14 @@
         <div class="navbarbottomgradient">
             <a href="#">
                 <i class="fas fa-question-circle fa-lg"></i>
-                USER MANUAL
+               <span class="nav-text"> USER MANUAL</span>
             </a>
         </div>
 
         <div>
             <a href="#">
                 <i class="fas fa-sign-out-alt fa-lg"></i>
-                LOGOUT
+                <span class="nav-text">LOGOUT</span>
             </a>
         </div>
     
@@ -157,6 +164,32 @@
 <div id="iframe_transition">
     <iframe src="pages/initial.html" name="body_iframe" class="body_iframe" id="iframe_transition"></iframe>
 </div>
+
+
+
+<!-- Script for dropdown menu within navbar-->
+<script>
+
+    //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    } 
+</script>
+
+
+
+
 </body>
 
 </html>
