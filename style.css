@@ -272,7 +272,7 @@ button:hover {
     float: left;
     width: 25%;
     padding: 4px;
-    height: 300px;
+    height: auto;
 }
 
 .row:after {
