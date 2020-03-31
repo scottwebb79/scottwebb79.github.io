@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>User Profile with Content Tabs - Design Shack Demo</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
+  <link rel="icon" href="http://designshack.net/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="profile_style.css">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<div id="w">
+    <div id="content" class="clearfix">
+      <div id="userphoto"><img src="Img/Profile_Picture.jpg" alt="default avatar"></div>
+      <h1>USER PROFILE</h1>
+
+      <nav id="profiletabs">
+        <ul class="clearfix">
+          <li><a href="#bio" class="sel">Bio</a></li>
+          <li><a href="#Qualifications">Credentials</a></li>
+          <li><a href="#">Friends</a></li>
+          <li><a href="#settings">Settings</a></li>
+        </ul>
+      </nav>
+      
+      <section id="bio">
+    
+        <p> <strong>Rank:</strong> Gunnery Sergeant // Paygrade: E-7 <br>
+            <strong>Full Name:</strong>Scott C. Webb <br>
+            <strong>Unit:</strong> MASS-3, MACG-38, 3MAW <br>
+            <strong>Home Address:</strong> 111 W. Main St., Camp Pendleton, CA <br>
+            <strong>Phone:</strong> (435)757-4656<br>
+            <strong>Permissions:</strong> Read/Wright/Unit Admin<br>
+            <strong>Scope:</strong> Squadron WTTP (Sq1-WTTP)
+        </b></p>
+
+        <p><strong>Biography:</strong> Gunnery Sergeant Webb has deployed in support of Operation Iraqi Freedom as well as Operation Enduring Freeedom. His awards include the Navy Marine Corps Commedation Medal and the Navy Marine Corps Achievement Medal in leiu of fourth award He joined the Marine Corps in 2003 where he attended recruit training at MCRD San Diego. Upon gradation, he attended his Military Occupation Speciality school in Twenty-Nine Palms, Ca with Air Support Training Squadron, Marine Corps Communication and Electronics School.</p>
+
+      </section>
+      
+      <section id="Qualifications" class="hidden">
+        <p><u>Qualifications</u></p>
+        
+        <p class="Qualification" style="font-size:small">7242 - Plotter <br>
+                                 7242 - Tactical Air Request / Helicopter Request Net Operator<br>
+                                 7242 - Tatical Air Command / Direct Air Support Net Operator<br>
+                                 7242 - Fire Support Coordination Net Operator<br>
+                                 7242 - Direct Air Support Center Crew Chief<br>
+                                 7242 - Weapons and Tactics Instructor<br>
+        </p>
+
+      </section>
+      
+      <section id="friends" class="hidden">
+        <p>Friends list:</p>
+        
+        <ul id="friendslist" class="clearfix">
+          <li><a href="#"><img src="images/avatar.png" width="22" height="22"> James Zigga</a></li>
+          <li><a href="#"><img src="images/avatar.png" width="22" height="22"> Kristopher Rivers</a></li>
+          <li><a href="#"><img src="images/avatar.png" width="22" height="22"> Panteleon Garcia</a></li>
+        </ul>
+      </section>
+      
+      <section id="settings" class="hidden">
+        <p>Edit your user settings:</p>
+        
+        <p class="setting"><span>E-mail Address <img src="Img/edit.png" alt="*Edit*"></span> lolno@gmail.com</p>
+        
+        <p class="setting"><span>Language <img src="Img/edit.png" alt="*Edit*"></span> English(US)</p>
+        
+        <p class="setting"><span>Profile Status <img src="Img/edit.png" alt="*Edit*"></span> Public</p>
+        
+        <p class="setting"><span>Update Frequency <img src="Img/edit.png" alt="*Edit*"></span> Weekly</p>
+        
+        <p class="setting"><span>Connected Accounts <img src="Img/edit.png" alt="*Edit*"></span> None</p>
+      </section>
+    </div><!-- @end #content -->
+  </div><!-- @end #w -->
+<script type="text/javascript">
+$(function(){
+  $('#profiletabs ul li a').on('click', function(e){
+    e.preventDefault();
+    var newcontent = $(this).attr('href');
+    
+    $('#profiletabs ul li a').removeClass('sel');
+    $(this).addClass('sel');
+    
+    $('#content section').each(function(){
+      if(!$(this).hasClass('hidden')) { $(this).addClass('hidden'); }
+    });
+    
+    $(newcontent).removeClass('hidden');
+  });
+});
+</script>
+</body>
+</html>
