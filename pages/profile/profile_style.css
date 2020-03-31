@@ -65,28 +65,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   table { border-collapse: collapse; border-spacing: 0; }
   img { border: 0; max-width: 100%; }
-  
-  #topbar {
-    background: #4f4a41;
-    padding: 10px 0 10px 0;
-    text-align: center;
-    height: 36px;
-    overflow: hidden;
-    -webkit-transition: height 0.5s linear;
-    -moz-transition: height 0.5s linear;
-    transition: height 0.5s linear;
-  }
-  #topbar a {
-    color: #fff;
-    font-size:1.3em;
-    line-height: 1.25em;
-    text-decoration: none;
-    opacity: 0.5;
-    font-weight: bold;
-  }
-  #topbar a:hover {
-    opacity: 1;
-  }
+
   
   /** typography **/
   h1 {
@@ -235,7 +214,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   .qualifications {
-    border-bottom: 1px solid #d6d1af;
+    border-bottom: 1px solid steelblue;
     padding-bottom: 4px;
   }
   
@@ -243,7 +222,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     display: block;
     font-weight: normal;
     padding: 7px 3px;
-    border-top: 1px solid #d6d1af;
+    border-top: 1px solid lightskyblue;
     margin-bottom: 5px;
   }
   .setting span {
