@@ -14,6 +14,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     box-sizing: border-box;
   }
   html { overflow-y: scroll; }
+
   body { 
     background-image: url("Img/background.png");
     background-size: cover;
@@ -185,7 +186,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 8px 11px;
     font-size: 1.2em;
     font-weight: bold;
-    background: #eae8db;
+    background-color: rgb(226, 244, 255);
     color: #666;
     margin-right: 7px;
     border: 1px solid #fff;
@@ -198,13 +199,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   #profiletabs ul li a:hover {
     text-decoration: none;
-    background: #dad7c2;
+    background: rgb(196, 232, 255);
     color: #565656;
   }
   
   #profiletabs ul li a.sel {
     background: #fff;
-    border-color: #d1cdb5;
+    border-color: steelblue;
   }
   
   
