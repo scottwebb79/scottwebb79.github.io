@@ -285,35 +285,6 @@ button:hover {
     text-align: center;
 }
 
-.modalDialog {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-
-.modalDialog:target {
-    opacity:1;
-    pointer-events: none;
-}
-
-.modalDialog > div {
-    width: 800px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    color: black;
-}
-
 .close {
     background: #606061;
     color: #FFFFFF;
@@ -348,19 +319,20 @@ button:hover {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+/*    background-color: rgb(0,0,0); /* Fallback color */
+/*    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     border-radius: 6px;
 }
 
   /* Modal Content */
 .modal-content {
     position: relative;
-    background-color: #fefefe;
+    display: grid;
+    background-color: rgba(243, 243, 243, 0.9);
     margin: auto;
     padding: 0;
     width: 900px;
-    height:500px;
+    height:auto;
     border: 1px solid #888;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
@@ -368,6 +340,10 @@ button:hover {
     animation-name: animatetop;
     animation-duration: 0.4s;
     border-radius: 10px;
+    color: rgb(44, 44, 44);
+    resize: both;
+    overflow: hidden;
+    z-index: 50;
 }
 
   /* Add Animation */
@@ -406,6 +382,7 @@ button:hover {
      1px 2px 0 Black;
      border-top-left-radius: 10px;
      border-top-right-radius: 10px;
+     cursor: move;
 }
 
 .modal-body {
@@ -413,8 +390,57 @@ button:hover {
     width: 100%;
     overflow-x: auto;
     overflow-y: auto;
+    height: auto;
+    column-count: 2;
 }
 
 .modal-body h3 {
     word-break: break-all;
+}
+
+.entry_form {
+    font-size: small;
+    font-weight: 300;
+}
+/* MACCS Training Form Styling */
+
+form {
+    border: 2px solid rgb(75, 75, 75);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgba(180, 213, 255, 0.123);
+    height: auto;
+    width: 100%;
+    font-weight: 10px;
+}
+.modal_input {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display:inline-block;
+    border:1px solid rgb(173, 173, 173);
+    border-radius: 4px;
+    height: 20px;
+    font-family: "Open Sans", arial;
+    font-size: 10px;
+    color: rgb(48, 48, 48);
+    text-align: center;
+}
+
+.modal_input:hover {
+    border: 2px solid lightskyblue;
+    border-radius: 4px;
+}
+
+.entry_form_left label, .entry_form_right label {
+    
+    font-size: 10px;
+    padding-right: 5px;
+}
+
+#exerciseName {
+    width: 300px;
+}
+label {
+    font-size: 10px;
+    padding-right: 5px;
 }

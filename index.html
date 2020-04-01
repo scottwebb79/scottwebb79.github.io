@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap">
-
+    
     <script type="text/javascript" src="chatscript.js"></script>
 
 </head>
@@ -73,29 +73,37 @@
             <div id="myDropdown" class="dropdown-container">
             
                 <button id="myBtn">Live and/or Simulated</button>
-                <div id="myModal" class="modal">
+                <div id="myModaldiv" class="modal">
 
                     <!-- Modal content: Live/Simulated Training -->
-                    <div class="modal-content">
-                        <div class="modal-header">
+                    <div class="modal-content" id="myModal">
+                        <div class="modal-header" id="myModaldivheader">
                             <span class="close">&times;</span>
                             <h2>Live and/or Simulated Data Entry</h2>
                         </div>
                         <div class="modal-body">
-                            <h3>The live and/or simulated data entry module will allow training administrators to enter training <br>and readiness event codes accomplished by a specifc trainee by way of a form. See below for<br>requirement list</h3>
-                            <h4>
-                            <ul>
-                                <li>Trainee Name</li>
-                                <li>Trainee Syllabus</li>
-                                <li>Trainer Name</li>
-                                <li>Trainer Instructor Designation</li>
-                                <li>Date Accomplished</li>
-                                <li>Input area for dropdown selection of accomplished event codes with radial selection for standard of<br> Unsat to Proficient (4).</li>
-                                <li>Exercise/Deployment Name</li>
-                                <li>Student Comment input box</li>
-                                <li>Instructor Comment input box</li>
-                            </ul>
-                            </h4>
+                            <form method="POST">
+                                <div class="entry_form_left">
+                                    <label for="traineeName">Trainee:</label><input type="text" class="modal_input" id="traineeName" Value="Enter Trainee Name"/>
+                                    <label for="traineeBillet">Trainee Billet:</label><input type="text" class="modal_input" id="traineeBillet" Value="Enter Trainee Billet Name"/><br>
+                                    <label for="instructorName">Instructor:</label><input type="text" class="modal_input" id="instructorName" Value="Enter Instructor Name"/>
+                                    <label for="instructorDesg">Instructor Desg:</label><input type="text" class="modal_input" id="instructorDesg" Value="Enter"/><br>
+                                    <label for="startDate">Start Date:</label><input type="date" class="modal_input" id="startDate" Value="">
+                                    <label for="endDate">End Date:</label><input type="date" class="modal_input" id="endDate" Value=""><br>
+                                    <label for="exerciseName">Exercise:</label><input type="text" class="modal_input" id="exerciseName" Value="Enter Exercise or Deployment Name"><br>
+                                    
+                                    <div class="entry_form_left" id="dynamicInput">
+
+                                    </div>
+                                    <input type="button" value="ADD EVENT" onclick="addInput('dynamicInput');">
+                                    <br>
+                                    <input type="submit" value="Submit">
+                                </div>
+
+
+
+
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -206,12 +214,12 @@
         }
       });
     } 
-</script>
 
-<!--Modal Script-->
-<script>
+
+//Modal Script
+
     // Get the modal
-    var modal = document.getElementById("myModal");
+    var modal = document.getElementById("myModaldiv");
     
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
@@ -235,7 +243,70 @@
         modal.style.display = "none";
       }
     }
-    </script>
+
+// Add additional MTF Event
+
+        var counter = 1;
+
+var limit = 22;
+
+function addInput(divName){
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " events");
+     }
+     else {
+          var newdiv = document.createElement('div');
+          newdiv.innerHTML = "<span class='modal_input' style='margin-bottom: 1px;'>Event:</span>" + " <input type='text' name='myInputs[]' class='modal_input' style='margin-bottom: 1px;'>";
+          document.getElementById(divName).appendChild(newdiv);
+          counter++;
+     }
+}
+
+//Makes the modal moveable
+
+dragElement(document.getElementById("myModaldiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "divheader")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "divheader").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>>
 
 </body>
 
