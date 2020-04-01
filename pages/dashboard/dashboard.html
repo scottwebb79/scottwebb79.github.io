@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="Keywords" content="MACCS, USMC, USMC Aviation"/>
+<meta name="Author" content="Scott C. Webb"/>
+<meta name="Viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>MACCS Training Information System</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap">
+
+<!-- FusionChart Core Library -->
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+<!-- FusionChart Theme Libraries -->
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+<script type="text/javascript" src="js/fusioncharts.js"></script>
+<script type="text/javascript" src="js/themes/fusioncharts.theme.zune.js"></script>
+<script type="text/javascript" src="js/themes/fusioncharts.theme.ocean.js"></script>
+
+
+<!-- FusionChart Script-->
+<script type="text/javascript">
+
+    const chartData = [{
+        "label": "SAD",
+        "value": "1"
+    }, {
+        "label": "TAD",
+        "value": "4"
+    }, {
+        "label": "HD",
+        "value": "4"
+    }, {
+        "label": "CC",
+        "value": "1"
+    }, {
+        "label": "IDM",
+        "value": "2"
+    }, {
+        "label": "TCDS",
+        "value": "4"
+    }, {
+        "label": "TRHR",
+        "value": "3"
+    }, {
+        "label": "FSC",
+        "value": "4"
+    }, {
+        "label": "ACR",
+        "value": "7"
+    }
+    ];
+
+    const chartConfig = {
+    type: 'column3d',
+    renderAt: 'chart-container',
+    width: '40%',
+    height: '400',
+    dataFormat: 'json',
+    dataSource: {
+ 
+        "chart": {
+            "caption": "DIRECT AIR SUPPORT CENTER CMMR - APRIL 2020",
+            "subCaption": "Marine Air Support Squadron 3",
+            "xAxisName": "Qualification Title",
+            "yAxisName": "Total Qualificatoin",
+            "numberSuffix": "",
+            "theme": "zune, ocean",
+            },
+
+        "data": chartData
+        }
+    };
+    FusionCharts.ready(function(){
+    var fusioncharts = new FusionCharts(chartConfig);
+    fusioncharts.render();
+    });
+
+</script>
+</head>
+
+<body>
+<div id="chart-container">Chart loading!</div>
+</body>
+
+</html>
