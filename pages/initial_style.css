@@ -189,7 +189,7 @@ body {
     .container {
     padding: 2px 16px;
     overflow-y: hidden;
-    overflow-z: auto;
+    overflow-x: auto;
 }
 
   * {
