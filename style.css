@@ -132,7 +132,7 @@ button:hover {
 }
 
 .sidenav:hover {
-    width: 175px;
+    width: 150px;
     transition: width .7s;
 }
 
