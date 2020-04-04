@@ -25,7 +25,16 @@
     </header>
 
 <nav>
+
     <div class="sidenav" id="nav-transition">
+
+        <div>
+            <a href="pages/initial.html" target="body_iframe">
+                <i class="fa fa-home fa-lg"></i>
+                <span class="nav-text">Home</span>
+            </a>
+        </div>
+
         <div>
             <a href="pages/profile/profile.html" target="body_iframe">
                 <i class="fa fa-user fa-lg"></i>
@@ -65,64 +74,10 @@
 
 
         <div class="navbardarkerli">
-            <a href="pages/dataEntry/dataEntry.html" target="body_iframe">Data Entry</a>
-        </div>
-
-        <div class="navbardarkerli">
-
-
-
-            <button href="/pages/dataEntry/dataEntry.html" class="dropdown-btn"><i class="fas fa-database fa-lg" id="nav-icon" style="margin-bottom: 10px;"></i>
-                <span class="nav-text">Data Entry
-                <i class="fas fa-caret-down" id="caret-down"></i>
-                </span>
-            </button>
-            <div id="myDropdown" class="dropdown-container">
-            
-                <button id="myBtn">Live and/or Simulated</button>
-                <div id="myModaldiv" class="modal">
-
-                    <!-- Modal content: Live/Simulated Training -->
-                    <div class="modal-content" id="myModal">
-                        <div class="modal-header" id="myModaldivheader">
-                            <span class="close">&times;</span>
-                            <h2>Live and/or Simulated Data Entry</h2>
-                        </div>
-                        <div class="modal-body">
-                            <form method="POST">
-                                <div class="entry_form_left">
-                                    <span class="Stu_Heading">Trainee / Instructor Information</span><br>
-                                    <label for="traineeName">Trainee:</label><input type="text" class="modal_input" id="traineeName" Value="Enter Trainee Name" style="width: 200px; text-align: left;"/>
-                                    <label for="traineeBillet">Trainee Billet:</label><input type="text" class="modal_input" id="traineeBillet" Value="Enter Trainee Billet Name"/><br>
-                                    <label for="instructorName">Instructor:</label><input type="text" class="modal_input" id="instructorName" Value="Enter Instructor Name" style="text-align: left; width: 200px;"/>
-                                    <label for="instructorBillet">Instructor Billet:</label><input type="text" class="modal_input" id="instructorBillet" Value="Enter"/>
-                                    <label for="instructorDesg">Instructor Desg:</label><input type="text" class="modal_input" id="instructorDesg" Value="Enter" style="width: 50px;"/><br>
-                                    <label for="startDate">Start Date:</label><input type="date" class="modal_input" id="startDate" Value="">
-                                    <label for="endDate">End Date:</label><input type="date" class="modal_input" id="endDate" Value=""><br>
-                                    <label for="exerciseName">Exercise:</label><input type="text" class="modal_input" id="exerciseName" Value="Enter Exercise or Deployment Name"><br>
-                                    <span class="Stu_Heading">Student Comments</span><br>
-                                    <textarea class="studentComment">Allow the student to add comments here!</textarea><br>
-                                    <span class="Stu_Heading">Instructor Comments</span><br>
-                                    <textarea class="instructorComment">Enter instructor comments here!</textarea>
-                                </div>
-                            </form>
-                            <form>
-                                <div class="entry_form_right">
-                                    <span class="Stu_Heading">T&amp;R Events trained during Exercise/Deployment</span><br>
-                                    <div class="entry_form_left" id="dynamicInput">
-
-                                    </div>
-                                    <input type="button" value="ADD EVENT" class="addEvent_btn" onclick="addInput('dynamicInput');">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="submit" value="Cancel" class="modal_cancel_btn" style="float: right; margin-right: 20px;">
-                            <input type="submit" value="Submit" class="modal_submit_btn" style="float:inline-end">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <a href="pages/dataEntry/dataEntry.html" target="body_iframe">
+                <i class="fas fa-database fa-lg"></i>
+                <span class="nav-text">Data Entry</span>
+            </a>
         </div>
 
         <div class="navbardarkerli">

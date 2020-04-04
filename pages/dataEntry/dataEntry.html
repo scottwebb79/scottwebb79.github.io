@@ -21,32 +21,32 @@
         <header class="container_header" id="container_header">
             <span class="header_align">
                <h1>Live & Simulation Training Entry</h1>
-                <button type="submit" href="../initial.html" class="close_btn">X</button>
+                <a href="../initial.html"><button type="button" class="close_btn">X</button></a>
             </span>
         </header>
 
-
         <div class="row">
             <div class="column">
-                <div class="entry_form">
-                    <span class="left_Heading">Trainee / Instructor Information</span><br>
-                    <label for="traineeName">Trainee:</label><input type="text" class="form_input" id="traineeName" Value="Enter Trainee Name" style="width: 200px; text-align: left; margin-left: 3px;"/>
-                    <label for="traineeBillet">Trainee Billet:</label><input type="text" class="form_input" id="traineeBillet" Value="Enter Trainee Billet Name"/><br>
-                    <label for="instructorName">Instructor:</label><input type="text" class="form_input" id="instructorName" Value="Enter Instructor Name" style="text-align: left; width: 200px;"/>
-                    <label for="instructorBillet">Instructor Billet:</label><input type="text" class="form_input" id="instructorBillet" Value="Enter"/>
-                    <label for="instructorDesg">Instructor Desg:</label><input type="text" class="form_input" id="instructorDesg" Value="Enter" style="width: 50px;"/><br>
-                    <label for="startDate">Start Date:</label><input type="date" class="form_input" id="startDate" Value="">
-                    <label for="endDate">End Date:</label><input type="date" class="form_input" id="endDate" Value=""><br>
-                    <label for="exerciseName">Exercise:</label><input type="text" class="form_input" id="exerciseName" Value="Enter Exercise or Deployment Name"><br>
-                    <span class="left_Heading">Student Comments</span><br>
-                    <textarea class="studentComment">Allow the student to add comments here!</textarea><br>
-                    <span class="left_Heading">Instructor Comments</span><br>
-                    <textarea class="instructorComment">Enter instructor comments here!</textarea>
-                </div>
-            </form>
-        </div>
-            <div classe="column">
-                <form>
+                        <div class="entry_form" >
+                        <span class="left_Heading">Trainee / Instructor Information</span><br>
+                        <label for="traineeName">Trainee:</label><input type="text" class="form_input" id="traineeName" value="Enter Trainee Name" onfocus="g" style="width: 200px; text-align: left; margin-left: 3px;"/>
+                        <label for="traineeBillet">Trainee Billet:</label><input type="text" class="form_input" id="traineeBillet" value="Enter Trainee Billet Name" onfocus=""/><br>
+                        <label for="instructorName">Instructor:</label><input type="text" class="form_input" id="instructorName" value="Enter Instructor Name" onfocus="" style="text-align: left; width: 200px;"/>
+                        <label for="instructorBillet">Instructor Billet:</label><input type="text" class="form_input" id="instructorBillet" value="Enter" onfocus=""/>
+                        <label for="instructorDesg">Instructor Desg:</label><input type="text" class="form_input" id="instructorDesg" value="Enter" onfocus="" style="width: 50px;"/><br>
+                        <label for="startDate">Start Date:</label><input type="date" class="form_input" id="startDate" value="">
+                        <label for="endDate">End Date:</label><input type="date" class="form_input" id="endDate" value=""><br>
+                        <label for="exerciseName">Exercise:</label><input type="text" class="form_input" id="exerciseName" value="Enter Exercise or Deployment Name" onfocus="">  <br>
+                        <span class="left_Heading">Student Comments</span><br>
+                        <textarea class="studentComment" value="Enter student comments here!" onfocus=""></textarea><br>
+                        <span class="left_Heading">Instructor Comments</span><br>
+                        <textarea class="instructorComment" Value="Enter instructor comments here" onfocus=""></textarea>
+                         </div>
+            </div>
+
+            <div class="column">
+                <div class="entry_form"></div>
+                <form method="POST">
                     <div class="entry_form">
                         <span class="left_Heading">T&amp;R Events trained during Exercise/Deployment</span><br>
                         <div class="entry_form_left" id="dynamicInput">
@@ -56,29 +56,23 @@
                 </form>
             </div>
          </div>
+
          <div class="container_footer">
             <a href="#" class="formCancel_btn">Cancel</a>
             <a herf="#" class="formSubmit_btn">Submit</a>
         </div>
     </div>
 
-
 <!-- End of the Container-->
 </main>
 
 </body>
 
-
-
 <!--Script for adding Events into the right column-->
 
 <script>
-
-
 var counter = 1;
-
 var limit = 18;
-
 function addInput(divName){
      if (counter == limit)  {
           alert("You have reached the limit of adding " + counter + " events");
@@ -98,6 +92,5 @@ function addInput(divName){
      }
 }
 </script>
-
 
 </html>
