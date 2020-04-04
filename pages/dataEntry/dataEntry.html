@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="Scott C. Webb"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="dataEntry.css"/>
+
+<title>MACCS-IS: Data Entry</title>
+
+</head>
+
+<body>
+<main>
+    
+    <div class="dataEntry_Container" id="container">
+        <header class="container_header" id="container_header">
+            <span class="header_align">
+               <h1>Live & Simulation Training Entry</h1>
+                <button type="submit" href="../initial.html" class="close_btn">X</button>
+            </span>
+        </header>
+
+
+        <div class="row">
+            <div class="column">
+                <div class="entry_form">
+                    <span class="left_Heading">Trainee / Instructor Information</span><br>
+                    <label for="traineeName">Trainee:</label><input type="text" class="form_input" id="traineeName" Value="Enter Trainee Name" style="width: 200px; text-align: left;"/>
+                    <label for="traineeBillet">Trainee Billet:</label><input type="text" class="form_input" id="traineeBillet" Value="Enter Trainee Billet Name"/><br>
+                    <label for="instructorName">Instructor:</label><input type="text" class="form_input" id="instructorName" Value="Enter Instructor Name" style="text-align: left; width: 200px;"/>
+                    <label for="instructorBillet">Instructor Billet:</label><input type="text" class="form_input" id="instructorBillet" Value="Enter"/>
+                    <label for="instructorDesg">Instructor Desg:</label><input type="text" class="form_input" id="instructorDesg" Value="Enter" style="width: 50px;"/><br>
+                    <label for="startDate">Start Date:</label><input type="date" class="form_input" id="startDate" Value="">
+                    <label for="endDate">End Date:</label><input type="date" class="form_input" id="endDate" Value=""><br>
+                    <label for="exerciseName">Exercise:</label><input type="text" class="form_input" id="exerciseName" Value="Enter Exercise or Deployment Name"><br>
+                    <span class="Stu_Heading">Student Comments</span><br>
+                    <textarea class="studentComment">Allow the student to add comments here!</textarea><br>
+                    <span class="Stu_Heading">Instructor Comments</span><br>
+                    <textarea class="instructorComment">Enter instructor comments here!</textarea>
+                </div>
+            </form>
+        </div>
+            <div classe="column">
+                <form>
+                    <div class="entry_form_right">
+                        <span class="Stu_Heading">T&amp;R Events trained during Exercise/Deployment</span><br>
+                        <div class="entry_form_left" id="dynamicInput">
+                        </div>
+                        <input type="button" value="ADD EVENT" class="addEvent_btn" onclick="addInput('dynamicInput');">
+                    </div>
+                </form>
+            </div>
+        </div>
+<!-- End of the Container-->
+    </div>
+</main>
+
+
+<footer></footer>
+
+</body>
+
+
+
+<!--Script for adding Events into the right column-->
+
+<script>
+
+
+var counter = 1;
+
+var limit = 18;
+
+function addInput(divName){
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " events");
+     }
+     else {
+          var newdiv = document.createElement('div');
+          newdiv.innerHTML = "<label style='margin-bottom: 1px;'>Event:</label>" +
+          " <input type='text' name='myInputs[]' class='modal_input' style='margin-bottom: 1px; width: 360px;'>" +
+          " <input type='radio' id='Unsat' name=eventRating' value='Unsat' style='vertical-align=middle'><label for='Unsat' style='vertical-align=middle'>U</label>" +
+          " <input type='radio' id='One' name=eventRating' value='One' style='vertical-align='middle'><label for='One' style='vertical-align='middle'>1</label>" +
+          " <input type='radio' id='Two' name=eventRating' value='Two' style='vertical-align='middle'><label for='Two' style='vertical-align='middle'>2</label>" +
+          " <input type='radio' id='Three' name=eventRating' value='Three' style='vertical-align='middle'><label for='Three' style='vertical-align='middle'>3</label>" +
+          " <input type='radio' id='Four' name=eventRating' value='Four' style='vertical-align='middle'><label for='Four' style='vertical-align='middle'>4</label>";
+
+          document.getElementById(divName).appendChild(newdiv);
+          counter++;
+     }
+}
+</script>
+
+
+</html>>

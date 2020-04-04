@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    margin-left: 50px;
+    transition: ease-in-out;
+    transition-duration: .7s;
+}
+
+body:hover {
+    margin-left: 0px;
+    transition: ease-in-out;
+    transition-duration: .7s;
+}
+
+.dataEntry_Container {
+    margin: 20px;
+    display: block;
+    width: auto;
+    resize: both;
+    padding: 0px;
+    background-color: rgba(240, 240, 240, 0.959);
+    opacity: .9;
+    border: 1px solid steelblue;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    -webkit-box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
+    box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
+
+}
+
+.container_header {
+    z-index: 2;
+    padding: 1px 0px 1px 20px;
+    margin-top: -4px;
+    display: block;
+    position: sticky;
+    top: 0;
+    background-color: steelblue;
+    background-image: linear-gradient(to bottom, lightskyblue, steelblue);
+    font-family: 'Open Sans', cursive;
+    font-size: 20px;
+    cursor: move;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+span {
+    display: inline-block;
+    vertical-align: middle;
+}
+h1 {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: white;
+    text-shadow:
+    -1px -1px 0 SteelBlue,  
+     1px -1px 0 SteelBlue,
+     -1px 2px 0 Black,
+      1px 2px 0 Black;
+}
+
+.close_btn {
+    background-image: linear-gradient(135deg, #d1d1d1, #606061);
+    color: #FFFFFF;
+    line-height: 20px;
+    position: absolute;
+    right: .4rem;
+    text-align: center;
+    top: .5rem;
+    width: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 10px;
+    
+    border-radius: 46px;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close_btn:hover {
+    background-image: linear-gradient(to left, lightskyblue, steelblue);
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    height: 900px;
+}
+
+.row {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+/* Styling for the forms */
+
+label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+.form_input {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display:inline-block;
+    border:1px solid rgb(173, 173, 173);
+    background-color: white;
+    border-radius: 4px;
+    height: 20px;
+    font-family: "Open Sans", arial;
+    font-size: 10px;
+    color: rgb(48, 48, 48);
+    text-align: center;
+}
+
+.form_input:hover {
+    border: 1px solid lightskyblue;
+    -webkit-box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
+    -moz-box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
+    box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
+    border-radius: 4px;
+}
+
+.left_Heading {
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    font-display: block;
+    margin-bottom: 4px;
+}
+
+.studentComment {
+    width: 100%;
+    height: 60px;
+    resize: none;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    padding: 5px 10px 5px 10px;
+    border:1px solid rgb(173, 173, 173);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-family: "Open Sans", arial;
+    font-size: 10px;
+    color: rgb(48, 48, 48);
+}
+
+.studentComment:hover {
+    border: 1px solid lightskyblue;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
+    -moz-box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
+    box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
+}
+
+.instructorComment {
+    width: 100%;
+    height: 250px;
+    resize: none;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    padding: 5px 10px 5px 10px;
+    border:1px solid rgb(173, 173, 173);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-family: "Open Sans", arial;
+    font-size: 10px;
+    color: rgb(48, 48, 48);
+}
+
+.instructorComment:hover {
+    border: 1px solid lightskyblue;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
+    -moz-box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
+    box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);    
+}
+
+/* Responsive layout - Change from 1 Row, 2 Columns to 1 Row, 1 Column when Media width display > 600px */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+
+    .body {
+        margin-left: 50px;
+    }
+
+    .body:hover {
+        margin-left: 0px;
+    }
+}
