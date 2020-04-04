@@ -29,9 +29,9 @@
             <div class="column">
                         <div class="entry_form" >
                         <span class="left_Heading">Trainee / Instructor Information</span><br>
-                        <label for="traineeName">Trainee:</label><input type="text" class="form_input" id="traineeName" value="Enter Trainee Name" onfocus="g" style="width: 200px; text-align: left; margin-left: 3px;"/>
+                        <label for="traineeName">Trainee:</label><input type="text" class="form_input" id="traineeName" value="Enter Trainee Name" onfocus=""/>
                         <label for="traineeBillet">Trainee Billet:</label><input type="text" class="form_input" id="traineeBillet" value="Enter Trainee Billet Name" onfocus=""/><br>
-                        <label for="instructorName">Instructor:</label><input type="text" class="form_input" id="instructorName" value="Enter Instructor Name" onfocus="" style="text-align: left; width: 200px;"/>
+                        <label for="instructorName">Instructor:</label><input type="text" class="form_input" id="instructorName" value="Enter Instructor Name" onfocus=""/>
                         <label for="instructorBillet">Instructor Billet:</label><input type="text" class="form_input" id="instructorBillet" value="Enter" onfocus=""/>
                         <label for="instructorDesg">Instructor Desg:</label><input type="text" class="form_input" id="instructorDesg" value="Enter" onfocus="" style="width: 50px;"/><br>
                         <label for="startDate">Start Date:</label><input type="date" class="form_input" id="startDate" value="">
@@ -80,7 +80,7 @@ function addInput(divName){
      else {
           var newdiv = document.createElement('div');
           newdiv.innerHTML = "<label style='margin-bottom: 1px;'>Event:</label>" +
-          " <input type='text' name='myInputs[]' class='modal_input' style='margin-bottom: 1px; width: 360px;'>" +
+          " <input type='text' name='myInputs[]' class='modal_input'>" +
           " <input type='radio' id='Unsat' name=eventRating' value='Unsat' style='vertical-align=middle'><label for='Unsat' style='vertical-align=middle'>U</label>" +
           " <input type='radio' id='One' name=eventRating' value='One' style='vertical-align='middle'><label for='One' style='vertical-align='middle'>1</label>" +
           " <input type='radio' id='Two' name=eventRating' value='Two' style='vertical-align='middle'><label for='Two' style='vertical-align='middle'>2</label>" +

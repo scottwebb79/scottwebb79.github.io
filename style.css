@@ -47,6 +47,10 @@ button:hover {
        1px 2px 0 Black;
 }
 
+.mobile-page-header {
+    visibility: hidden;
+}
+
 .page-header img {
     display: inline-block;
     padding-top: 4px;
@@ -539,5 +543,50 @@ label {
 	top:1px;
 }
 
-        
-        
+
+/* RESPONSIVE STYLING*/
+
+/* Responsive layout - Change from 1 Row, 2 Columns to 1 Row, 1 Column when Media width display > 600px */
+@media screen and (max-width: 600px) {
+
+    .body {
+        margin-left: 0;
+        padding: 0px;
+    }
+
+    .page-header {
+        display: inline-block;
+        font-size: 12px;
+        margin-left: -7px;
+        text-align: center;
+    }
+
+    .page-header img {
+        display: inline-block;
+        padding-top: 10px;
+        padding-left: 3px;
+        padding-right: 8px;
+        width: auto;
+        height: 35px;
+        vertical-align: middle;
+    }
+
+    .body:hover {
+        margin-left: 0px;
+    }
+    
+    .body_iframe {
+        padding-left: 10px;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .body_iframe:hover {
+        padding-left: 10px;
+        width: 100%;
+    }
+
+    #iframe_transition {
+        transition-timing-function: none;
+    }
+}
