@@ -49,7 +49,7 @@
                 <form method="POST">
                     <div class="entry_form">
                         <span class="left_Heading">T&amp;R Events trained during Exercise/Deployment</span><br>
-                        <h3> <script>docWrite(divUnique)</script></h2>
+                        <h3> <script>docWrite(divUnique)</script></h3>
                         <div class="entry_form_left" id="dynamicInput">
                         </div>
                         <input type="button" value="Add Event" class="addEvent_btn" onclick="addInput('dynamicInput');">
@@ -94,6 +94,10 @@ function addInput(divName){
           counter++;
           divUnique++;
      }
+}
+
+function display() {
+    alert(divUnique);
 }
 </script>
 
