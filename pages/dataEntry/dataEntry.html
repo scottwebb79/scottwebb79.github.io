@@ -49,6 +49,7 @@
                 <form method="POST">
                     <div class="entry_form">
                         <span class="left_Heading">T&amp;R Events trained during Exercise/Deployment</span><br>
+                        <h2>"divUnique=" + divUnique</h2>
                         <div class="entry_form_left" id="dynamicInput">
                         </div>
                         <input type="button" value="Add Event" class="addEvent_btn" onclick="addInput('dynamicInput');">
@@ -73,12 +74,14 @@
 <script>
 var counter = 1;
 var limit = 18;
+var divUnique = 1;
+
 function addInput(divName){
      if (counter == limit)  {
           alert("You have reached the limit of adding " + counter + " events");
      }
      else {
-          var newdiv = document.createElement('div');
+          var newdiv = document.createElement('div' + divUnique);
           newdiv.innerHTML = "<label style='margin-bottom: 1px;'>Event:</label>" +
           " <input type='text' name='myInputs[]' class='modal_input'>" +
           " <input type='radio' id='Unsat' name=eventRating' value='Unsat' style='vertical-align=middle'><label for='Unsat' style='vertical-align=middle'>U</label>" +
@@ -89,6 +92,7 @@ function addInput(divName){
 
           document.getElementById(divName).appendChild(newdiv);
           counter++;
+          divUnique++;
      }
 }
 </script>
