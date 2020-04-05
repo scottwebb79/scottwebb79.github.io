@@ -74,7 +74,7 @@
 <script>
 var counter = 1;
 var limit = 18;
-var divUnique = 1;
+var divUnique = 0;
 
 function addInput(divName){
      if (counter == limit)  {
@@ -84,11 +84,11 @@ function addInput(divName){
           var newdiv = document.createElement('div' + divUnique);
           newdiv.innerHTML = "<label style='margin-bottom: 1px;'>Event:</label>" +
           " <input type='text' name='myInputs[]' class='modal_input'>" +
-          " <input type='radio' id='Unsat' name=eventRating' value='Unsat' style='vertical-align=middle'><label for='Unsat' style='vertical-align=middle'>U</label>" +
-          " <input type='radio' id='One' name=eventRating' value='One' style='vertical-align='middle'><label for='One' style='vertical-align='middle'>1</label>" +
-          " <input type='radio' id='Two' name=eventRating' value='Two' style='vertical-align='middle'><label for='Two' style='vertical-align='middle'>2</label>" +
-          " <input type='radio' id='Three' name=eventRating' value='Three' style='vertical-align='middle'><label for='Three' style='vertical-align='middle'>3</label>" +
-          " <input type='radio' id='Four' name=eventRating' value='Four' style='vertical-align='middle'><label for='Four' style='vertical-align='middle'>4</label>";
+          " <input type='radio' id='Unsat' name=eventRatingU' value='Unsat' style='vertical-align=middle'><label for='Unsat' style='vertical-align=middle'>U</label>" +
+          " <input type='radio' id='One' name=eventRating1' value='One' style='vertical-align='middle'><label for='One' style='vertical-align='middle'>1</label>" +
+          " <input type='radio' id='Two' name=eventRating2' value='Two' style='vertical-align='middle'><label for='Two' style='vertical-align='middle'>2</label>" +
+          " <input type='radio' id='Three' name=eventRating3' value='Three' style='vertical-align='middle'><label for='Three' style='vertical-align='middle'>3</label>" +
+          " <input type='radio' id='Four' name=eventRating4' value='Four' style='vertical-align='middle'><label for='Four' style='vertical-align='middle'>4</label>";
 
           document.getElementById(divName).appendChild(newdiv);
           counter++;
