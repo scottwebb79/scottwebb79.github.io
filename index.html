@@ -217,6 +217,7 @@
 // Add additional MTF Event
 
         var counter = 1;
+        var divUnique = 1;
 
 var limit = 18;
 
@@ -225,7 +226,7 @@ function addInput(divName){
           alert("You have reached the limit of adding " + counter + " events");
      }
      else {
-          var newdiv = document.createElement('div');
+          var newdiv = document.createElement('div' + divUnique);
           newdiv.innerHTML = "<label style='margin-bottom: 1px;'>Event:</label>" +
           " <input type='text' name='myInputs[]' class='modal_input' style='margin-bottom: 1px; width: 360px;'>" +
           " <input type='radio' id='Unsat' name=eventRating' value='Unsat' style='vertical-align=middle'><label for='Unsat' style='vertical-align=middle'>U</label>" +
@@ -238,6 +239,7 @@ function addInput(divName){
 
           document.getElementById(divName).appendChild(newdiv);
           counter++;
+          divUnique++;
      }
 }
 </script>
