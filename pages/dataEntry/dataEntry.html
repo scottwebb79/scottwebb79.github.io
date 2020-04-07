@@ -10,6 +10,9 @@
 <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap">
 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <title>MACCS-IS: Data Entry</title>
 
 </head>
@@ -49,7 +52,6 @@
                 <form method="POST">
                     <div class="entry_form">
                         <span class="left_Heading">T&amp;R Events trained during Exercise/Deployment</span><br>
-                        <h3> <script>docWrite(divUnique)</script></h3>
                         <div class="entry_form_left" id="dynamicInput">
                         </div>
                         <input type="button" value="Add Event" class="addEvent_btn" onclick="addInput('dynamicInput');">
@@ -67,33 +69,31 @@
 <!-- End of the Container-->
 </main>
 
-</body>
-
 <!--Script for adding Events into the right column-->
 
 <script>
 var counter = 1;
 var limit = 18;
 var divUnique = 0;
+var radioName = 'radioName' + divUnique
 
 function addInput(divName){
+    divUnique++;
+    var radioName = 'radioName' + divUnique
      if (counter == limit)  {
           alert("You have reached the limit of adding " + counter + " events");
      }
      else {
           var newdiv = document.createElement('div' + divUnique);
-          newdiv.innerHTML = "<label style='margin-bottom: 1px;'>Event:</label>" +
-          " <input type='text' name='myInputs[]' class='modal_input'>" +
-          " <input type='radio' id='Unsat' name=eventRatingU' value='Unsat' style='vertical-align=middle'><label for='Unsat' style='vertical-align=middle'>U</label>" +
-          " <input type='radio' id='One' name=eventRating1' value='One' style='vertical-align='middle'><label for='One' style='vertical-align='middle'>1</label>" +
-          " <input type='radio' id='Two' name=eventRating2' value='Two' style='vertical-align='middle'><label for='Two' style='vertical-align='middle'>2</label>" +
-          " <input type='radio' id='Three' name=eventRating3' value='Three' style='vertical-align='middle'><label for='Three' style='vertical-align='middle'>3</label>" +
-          " <input type='radio' id='Four' name=eventRating4' value='Four' style='vertical-align='middle'><label for='Four' style='vertical-align='middle'>4</label>";
+          newdiv.innerHTML = "<label style='margin-bottom: 1px;'>Event: </label><input type='text' name='myInputs[] + divUnique' class='event_input'>" +
+                             "<input type='radio' name= radioName + '_U'></input><label>Unsat</label>" +
+                             "<input type='radio' name= radioName + '_1'> </input><label>1</label>" +
+                             "<input type='radio' name= radioName + '_2'></input><label>2</label>" +
+                             "<input type='radio' name= radioName + '_3'></input><label>3</label>" +
+                             "<input type='radio' name= radioName + '_4'></input><label>4</label><br>";
 
           document.getElementById(divName).appendChild(newdiv);
           counter++;
-          divUnique++;
-          alert(divUnique);
      }
 }
 
@@ -101,5 +101,13 @@ function display() {
     alert(divUnique);
 }
 </script>
+
+<script>
+    $( function() {
+      $( "#container" ).draggable();
+    } );
+    </script>
+
+</body>
 
 </html>

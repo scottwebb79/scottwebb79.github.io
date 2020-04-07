@@ -16,7 +16,7 @@ body:hover {
 .dataEntry_Container {
     margin-top: 20px;
     display: block;
-    width:auto;
+    width:1300px;
     height: auto;
     padding: 0px;
     background-color: rgba(240, 240, 240, 0.959);
@@ -213,13 +213,13 @@ label {
     box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);    
 }
 
-.modal_input {
+.event_input {
     width: 360px;
     margin-bottom: 5px;
     border-radius: 4px;    
 }
 
-.modal_input:hover {
+.event_input:hover {
     -webkit-box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
     -moz-box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
     box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);

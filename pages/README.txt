@@ -20,7 +20,7 @@ Iteration 2: Live/Sim Training Entry (MTF Form)                                 
    1) Input Form on pop-up window (prefer iframe in modal)                                    Modal created
 
       a) Trainee Username
-            i. Stage 1: Freetext textbox (datatype: string)
+            i. Stage 1: Freetext textbox (datatype: string)                                  Created input area, however not linked to a backend or have a concenate for required fields
             ii. Stage 2: Dropdown with autocomplete of the
                 trainees name. Format (Rank LName, FName) Datatype: (concenate string)
       
