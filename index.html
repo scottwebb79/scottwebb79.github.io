@@ -57,7 +57,7 @@
         </div>
 
         <div class="navbardarkerli">
-             <a href="#">
+             <a href="http://localhost:4200" target="body_iframe">
                 <i class="fas fa-calendar-alt fa-lg"></i>
                 <span class="nav-text">Calendar</span>
             </a>
@@ -183,63 +183,6 @@
       });
     } 
 
-
-//Modal Script
-
-    // Get the modal
-    var modal = document.getElementById("myModaldiv");
-    
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-// Add additional MTF Event
-
-        var counter = 1;
-        var divUnique = 1;
-
-var limit = 18;
-
-function addInput(divName){
-     if (counter == limit)  {
-          alert("You have reached the limit of adding " + counter + " events");
-     }
-     else {
-          var newdiv = document.createElement('div' + divUnique);
-          newdiv.innerHTML = "<label style='margin-bottom: 1px;'>Event:</label>" +
-          " <input type='text' name='myInputs[]' class='modal_input' style='margin-bottom: 1px; width: 360px;'>" +
-          " <input type='radio' id='Unsat' name=eventRating' value='Unsat' style='vertical-align=middle'><label for='Unsat' style='vertical-align=middle'>U</label>" +
-          " <input type='radio' id='One' name=eventRating' value='One' style='vertical-align='middle'><label for='One' style='vertical-align='middle'>1</label>" +
-          " <input type='radio' id='Two' name=eventRating' value='Two' style='vertical-align='middle'><label for='Two' style='vertical-align='middle'>2</label>" +
-          " <input type='radio' id='Three' name=eventRating' value='Three' style='vertical-align='middle'><label for='Three' style='vertical-align='middle'>3</label>" +
-          " <input type='radio' id='Four' name=eventRating' value='Four' style='vertical-align='middle'><label for='Four' style='vertical-align='middle'>4</label>";
-
-
-
-          document.getElementById(divName).appendChild(newdiv);
-          counter++;
-          divUnique++;
-     }
-}
 </script>
 
 </body>

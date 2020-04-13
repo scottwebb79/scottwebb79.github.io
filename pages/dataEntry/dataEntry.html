@@ -32,20 +32,60 @@
             <div class="column">
                         <div class="entry_form" >
                         <span class="left_Heading">Trainee / Instructor Information</span><br>
-                        <label for="traineeName">Trainee:</label><input type="text" class="form_input" id="traineeName" value="Enter Trainee Name" onfocus="this.value=''"/>
-                        <label for="traineeBillet">Trainee Billet:</label><input type="text" class="form_input" id="traineeBillet" value="Enter Trainee Billet Name" onfocus="this.value=''"/><br>
-                        <label for="instructorName">Instructor:</label><input type="text" class="form_input" id="instructorName" value="Enter Instructor Name" onfocus="this.value=''"/>
-                        <label for="instructorBillet">Instructor Billet:</label><input type="text" class="form_input" id="instructorBillet" value="Enter" onfocus="this.value=''"/>
-                        <label for="instructorDesg">Instructor Desg:</label><input type="text" class="form_input" id="instructorDesg" value="Enter" onfocus="this.value=''" style="width: 50px;"/><br>
+                        <label for="traineeName">Trainee:</label><input type="text" class="form_input" id="traineeName" placeholder="Enter Trainee Name" />
+
+                        <label for="traineeBillet">Trainee Billet:</label>
+                        <select id="traineeBillet" class="form_input">
+                            <option value="BLANK"></option>
+                            <option value="ACR">ACR</option>
+                            <option value="TARHR">TAR/HR</option>
+                            <option value="TACDAS">TAC/DAS</option>
+                            <option value="FSC">FSC</option>
+                            <option value="IDM">IDM</option>
+                            <option value="CC">CC</option>
+                            <option value="HD">HD</option>
+                            <option value="TAD">TAD</option>
+                            <option value="SAD">SAD</option>
+                            <option value="DCHF">DASC Chief</option>
+                            <option value="DOIC">DASC OIC</option>
+                            <option value="OTHER">Other</option>
+                        </select><br>
+
+                        <label for="instructorName">Instructor:</label><input type="text" class="form_input" id="instructorName" placeholder="Enter Instructor Name" />
+
+                        <label for="instructorBillet">Instructor Billet:</label>
+                        <select id="instructorBillet" class="form_input">
+                            <option value="instBLANK"></option>
+                            <option value="instCC">CC</option>
+                            <option value="instSAD">SAD</option>
+                            <option value="instOBS">Observer</option>
+                        </select>
+
+                        <label for="instructorDesg">Instructor Desg:</label>
+                        
+                        <select id="instructorDesg" class="form_input">
+                            <option value="instDesgBLANK"></option>
+                            <option value="instDesgBI">BI</option>
+                            <option value="instDesgSI">SI</option>
+                            <option value="instDesgFLC">FLC</option>
+                            <option value="instDesgWTI">WTI</option>
+                        </select>
+
+                        <br>
+                        
                         <label for="startDate">Start Date:</label><input type="date" class="form_input" id="startDate" value="">
                         <label for="endDate">End Date:</label><input type="date" class="form_input" id="endDate" value=""><br>
-                        <label for="exerciseName">Exercise:</label><input type="text" class="form_input" id="exerciseName" value="Enter Exercise or Deployment Name" onfocus="this.value=''"><br>
+                        <label for="exerciseName">Exercise:</label><input type="text" class="form_input" id="exerciseName" placeholder="Enter Exercise or Deployment Name"  style="width:250px;"/><br>
+                        <label for="performanceRating" class="perfRateLabel">Rate overall performance on scale of 1 (bad) to 10(excellent):</label><span class="perfRateLabel">0</span></span><input type="range" id="perfRange" class="perfRange" min="0" max="10"><span class="perfRateLabel">10</span>
+
+                        <br>
                         <span class="left_Heading">Student Comments</span><br>
-                        <textarea class="studentComment" value="Enter student comments here!"></textarea><br>
+                        <textarea class="studentComment" placeholder="Enter student comments here!"></textarea><br>
                         <span class="left_Heading">Instructor Comments</span><br>
-                        <textarea class="instructorComment" Value="Enter instructor comments here"></textarea>
+                        <textarea class="instructorComment" placeholder="Instructor comments should have the following: 1) Exercise Description, 2) Operation Summary, 3) C2 Systems Utilized, 4) Trainee Strengths, 5) Trainee Weaknesses, 6) Recommendations"></textarea>
                          </div>
             </div>
+
 
             <div class="column">
                 <div class="entry_form"></div>

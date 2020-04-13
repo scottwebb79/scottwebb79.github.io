@@ -324,7 +324,15 @@ label {
 	top:1px;
 }
 
+.perfRange {
+    display: table-cell;
+    vertical-align: middle;
+}
 
+.perfRateLabel {
+    margin-right: 20px;
+    font-size: 12px;
+}
 
 /* Responsive layout - Change from 1 Row, 2 Columns to 1 Row, 1 Column when Media width display > 600px */
 @media screen and (max-width: 600px) {
