@@ -23,20 +23,21 @@
     <div class="dataEntry_Container" id="container">
         <header class="container_header" id="container_header">
             <span class="header_align">
-               <h1>Live & Simulation Training Entry</h1>
-                <a href="../initial.html"><button type="button" class="close_btn">X</button></a>
+               <span class="h1">Live & Simulation Training Entry</span>
+                <a href="../initial.html" class="close_btn">X</a>
             </span>
         </header>
 
         <div class="row">
             <div class="column">
-                        <div class="entry_form" >
-                        <span class="left_Heading">Trainee / Instructor Information</span><br>
-                        <label for="traineeName">Trainee:</label><input type="text" class="form_input" id="traineeName" placeholder="Enter Trainee Name" />
 
-                        <label for="traineeBillet">Trainee Billet:</label>
-                        <select id="traineeBillet" class="form_input">
-                            <option value="BLANK"></option>
+                <form id="dataentry_form" autocomplete="on" method="POST" enctype="multipart/form-data">
+                    <div class="entry_form" >
+                        <fieldset name="student_info">
+                        <legend class="left_Heading">Trainee Information</legend>
+                        <label for="traineeName">Trainee:</label><input type="text" class="form_input" id="traineeName" placeholder="Rank LastName, FirstName" style="width: 50%;" autofocus required /> <!-- I am aware that autofocus does not work within an iframe because of autofocus stealing concerns-->
+                        <label for="traineeBillet">Trainee Billet:</label><select id="traineeBillet" class="form_input" required>
+                            <option disabled selected value>-Select-</option>
                             <option value="ACR">ACR</option>
                             <option value="TARHR">TAR/HR</option>
                             <option value="TACDAS">TAC/DAS</option>
@@ -50,40 +51,55 @@
                             <option value="DOIC">DASC OIC</option>
                             <option value="OTHER">Other</option>
                         </select><br>
+                        <label for="traineeEmail">Trainee Email:</label><input type="email" class="form_input" id="traineeEmail" style="width: 50%;" placeholder="trainee@domain.com" required /><br>
+                        </fieldset>
 
-                        <label for="instructorName">Instructor:</label><input type="text" class="form_input" id="instructorName" placeholder="Enter Instructor Name" />
-
+                        <fieldset name="instructor_info">
+                        <legend class="left_Heading">Instructor Information</legend>
+                        <label for="instructorName">Instructor:</label><input type="text" class="form_input" id="instructorName" placeholder="Rank LastName, FirstName" style="width:50%" required/><br>
                         <label for="instructorBillet">Instructor Billet:</label>
-                        <select id="instructorBillet" class="form_input">
-                            <option value="instBLANK"></option>
+                        <select id="instructorBillet" class="form_input" required>
+                            <option disabled selected value>-Select-</option>
                             <option value="instCC">CC</option>
                             <option value="instSAD">SAD</option>
                             <option value="instOBS">Observer</option>
                         </select>
 
                         <label for="instructorDesg">Instructor Desg:</label>
-                        
-                        <select id="instructorDesg" class="form_input">
-                            <option value="instDesgBLANK"></option>
+                        <select id="instructorDesg" class="form_input" required>
+                            <option disabled selected value>-Select-</option>
                             <option value="instDesgBI">BI</option>
                             <option value="instDesgSI">SI</option>
                             <option value="instDesgFLC">FLC</option>
                             <option value="instDesgWTI">WTI</option>
-                        </select>
-
-                        <br>
+                        </select><br>
                         
-                        <label for="startDate">Start Date:</label><input type="date" class="form_input" id="startDate" value="">
-                        <label for="endDate">End Date:</label><input type="date" class="form_input" id="endDate" value=""><br>
-                        <label for="exerciseName">Exercise:</label><input type="text" class="form_input" id="exerciseName" placeholder="Enter Exercise or Deployment Name"  style="width:250px;"/><br>
-                        <label for="performanceRating" class="perfRateLabel">Rate overall performance on scale of 1 (bad) to 10(excellent):</label><span class="perfRateLabel">0</span></span><input type="range" id="perfRange" class="perfRange" min="0" max="10"><span class="perfRateLabel">10</span>
+                        <label for="instEmail">Instructor Email:</label><input type="email" class="form_input" id="instEmail" style="width: 50%;" placeholder="instructor@domain.com" required /><br>
+                        </fieldset>
 
-                        <br>
+                        <fieldset name="Exercise_Info">
+                        <legend class="left_Heading">Exercise / Deployment Information</legend>
+                        <label for="exerciseName">Exercise:</label><input type="text" class="form_input" id="exerciseName" placeholder="Enter Exercise or Deployment Name"  style="width:200px;" required/>
+                        <label for="startDate">Start Date:</label><input type="date" class="form_input" id="startDate" value="" required>
+                        <label for="endDate">End Date:</label><input type="date" class="form_input" id="endDate" value="" required><br>
+                        </fieldset>
+
+                        <fieldset>
+                        <legend class="left_Heading">Performance Information</legend>
+                        <div class="range-wrap">
+                            <label for="range" style="margin-left: 20%">Rate overall performance on scale of 1 (Bad) to 10 (Excellent):</label>
+                            <input type="range" class="range" id="range" min="0" max="10" style="width: 70%; margin-left: 15%;">
+                            <output class="bubble"></output>
+                        </div>
+
                         <span class="left_Heading">Student Comments</span><br>
-                        <textarea class="studentComment" placeholder="Enter student comments here!"></textarea><br>
+                        <textarea class="studentComment" placeholder="Enter student comments here!" maxlength="255" required></textarea><br>
                         <span class="left_Heading">Instructor Comments</span><br>
-                        <textarea class="instructorComment" placeholder="Instructor comments should have the following: 1) Exercise Description, 2) Operation Summary, 3) C2 Systems Utilized, 4) Trainee Strengths, 5) Trainee Weaknesses, 6) Recommendations"></textarea>
-                         </div>
+                        <textarea class="instructorComment" placeholder="Instructor comments should have the following: 1) Exercise Description, 2) Operation Summary, 3) C2 Systems Utilized, 4) Trainee Strengths, 5) Trainee Weaknesses, 6) Recommendations" required></textarea>
+                        </fieldset>
+                    </div>
+                </form>
+
             </div>
 
 
@@ -98,16 +114,49 @@
                     </div>
                 </form>
             </div>
-         </div>
+        </div>
 
-         <div class="container_footer">
-            <a href="#" class="formCancel_btn">Cancel</a>
-            <a herf="#" class="formSubmit_btn" onclick="display();">Submit</a>
+        <div class="container_footer">
+            <button type="button" class="formCancel_btn">Cancel</button>
+            <button type="submit" class="formSubmit_btn" form="dataentry_form">Submit</button>
+            <input type="password" id="password" name="password" style="float:right; margin-top: 8px; margin-right: 10px; border: 1px solid #6666; border-radius: 4px;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" />
+            <label for="password" style="float:right; margin-top: 10px; margin-right:10px;" id="pass_input">Enter User Passowrd to Submit:</label>
+
+            <button type="button" class="formExport_btn" onclick="display();">Export PDF</button>
         </div>
     </div>
 
 <!-- End of the Container-->
 </main>
+
+
+<!-- Script for range input increment bubble-->
+
+<script>
+
+const allRanges = document.querySelectorAll(".range-wrap");
+allRanges.forEach(wrap => {
+  const range = wrap.querySelector(".range");
+  const bubble = wrap.querySelector(".bubble");
+
+  range.addEventListener("input", () => {
+    setBubble(range, bubble);
+  });
+  setBubble(range, bubble);
+});
+
+function setBubble(range, bubble) {
+  const val = range.value;
+  const min = range.min ? range.min : 0;
+  const max = range.max ? range.max : 10;
+  const newVal = Number(((val - min) *68.5) / (max - min));
+  bubble.innerHTML = val;
+
+  // Sorta magic numbers based on size of the native UI thumb
+  bubble.style.left = `calc(${newVal}% + (${100 - newVal * .03}px))`;
+}
+
+</script>
 
 <!--Script for adding Events into the right column-->
 

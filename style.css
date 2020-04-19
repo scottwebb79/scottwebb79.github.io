@@ -181,7 +181,7 @@ button:hover {
 
 .body_iframe {
     display: flexbox;
-    height: 800px;
+    height: 1000px;
     width:100%;
     border: none;
     padding-left: 175px;
@@ -191,7 +191,7 @@ button:hover {
 
 .body_iframe:hover {
     display:flexbox;
-    height: 800px;
+    height: 1000px;
     width: 100%;
     padding-left: 50px;
     overflow:hidden;

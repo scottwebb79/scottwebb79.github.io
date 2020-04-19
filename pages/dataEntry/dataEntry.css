@@ -4,6 +4,7 @@ body {
     margin-right: 40px;
     transition: ease-in-out;
     transition-duration: .7s;
+    height: 100%;
 }
 
 body:hover {
@@ -20,8 +21,7 @@ body:hover {
     height: auto;
     padding: 0px;
     background-color: rgba(240, 240, 240, 0.959);
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    border-radius: 6px;
     -webkit-box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
     -moz-box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
     box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
@@ -41,9 +41,6 @@ body:hover {
     cursor: move;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    border-left: 2px solid steelblue;
-    border-top: 2px solid steelblue;
-    border-right: 2px solid steelblue;
 }
 
 .sticky {
@@ -56,7 +53,7 @@ span {
     display: inline-block;
     vertical-align: middle;
 }
-h1 {
+.h1 {
     display: block;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
@@ -75,7 +72,7 @@ h1 {
     position: absolute;
     right: .4rem;
     text-align: center;
-    top: .5rem;
+    top: .2rem;
     width: 28px;
     text-decoration: none;
     font-weight: bold;
@@ -98,6 +95,7 @@ h1 {
     width: 50%;
     height: 100%;
     padding: 10px;
+    border: 1px solid #d1d1d1;
 
 }
 
@@ -148,7 +146,7 @@ label {
     margin-left: 3px;
 }
 
-.form_input:hover {
+.form_input:focus {
     border: 1px solid lightskyblue;
     -webkit-box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
     -moz-box-shadow: 0px 0px 16px -4px rgba(135,206,250,0.75);
@@ -157,13 +155,41 @@ label {
 }
 
 .left_Heading {
-    text-decoration: underline;
+    text-decoration: none;
     text-align: center;
     font-weight: bold;
     font-size: 12px;
-    font-display: block;
     margin-bottom: 4px;
 }
+
+input[type=range] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+    margin: 10px;
+    width: 160px;
+    outline: none;
+    background-color:rgba(240, 240, 240, 0.959);
+  }
+
+  /** FF*/
+  input[type="range"]::-moz-range-progress {
+    background-color: lightskyblue;
+    border-radius: 3px;
+  }
+  input[type="range"]::-moz-range-track {  
+    background-color: gray;
+  }
+  /* IE*/
+  input[type="range"]::-ms-fill-lower {
+    background-color: #007AFF;
+    border-radius: 3px;
+  }
+  input[type="range"]::-ms-fill-upper {  
+    background-color: #C7C7CC;
+  }
 
 .studentComment {
     width: 97%;
@@ -180,7 +206,7 @@ label {
     color: rgb(48, 48, 48);
 }
 
-.studentComment:hover {
+.studentComment:focus {
     border: 1px solid lightskyblue;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -204,7 +230,7 @@ label {
     color: rgb(48, 48, 48);
 }
 
-.instructorComment:hover {
+.instructorComment:focus {
     border: 1px solid lightskyblue;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -258,14 +284,41 @@ label {
     bottom: 0;
     width: 100%;
     background-color: white;
-    border-bottom-color: 2px solid steelblue;
-    border-left-color: 2px solid steelblue;
-    border-right-color: 2px solid steelblue;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     color: black;
     text-align: center;
     
+}
+
+.formExport_btn {
+    display: table-cell;
+    float: left;
+    margin-left: 15px;
+	box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:42px;
+	border:3px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:8px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.formExport_btn:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+
+#pass_input {
+    float: right;
+    margin-top: 11px;
+    margin-right: 8px;
 }
 
 .formSubmit_btn {
@@ -327,10 +380,42 @@ label {
 .perfRange {
     display: table-cell;
     vertical-align: middle;
+
 }
 
+.range-wrap {
+    position: relative;
+    margin: 0 auto 1rem;
+    border: 1px solid #d1d1d1;
+  }
+  .range {
+    width: 100px;
+  }
+  .bubble {
+    background-image: linear-gradient(to bottom, lightskyblue, steelblue);
+    color: white;
+    padding: 4px 12px;
+    position: absolute;
+    border-radius: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    margin-top: 32px;
+  }
+  .bubble::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: lightskyblue;
+    top: -1px;
+    left: 50%;
+  }
+
+
 .perfRateLabel {
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left: 15px;
     font-size: 12px;
 }
 
@@ -341,9 +426,8 @@ label {
     }
 
     .body {
-        margin: 0px -12px, 0px, 0px;
+        margin: 0px -12px 0px 0px;
         padding: 0px;
-
     }
 
     .body:hover {
