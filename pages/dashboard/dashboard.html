@@ -8,17 +8,62 @@
 
 <title>MACCS Training Information System</title>
 
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="dash_style.css">
 <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap">
 
 <!-- FusionChart Core Library -->
 <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+
 <!-- FusionChart Theme Libraries -->
 <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
-<script type="text/javascript" src="js/fusioncharts.js"></script>
-<script type="text/javascript" src="js/themes/fusioncharts.theme.zune.js"></script>
-<script type="text/javascript" src="js/themes/fusioncharts.theme.ocean.js"></script>
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.zune.js"></script>
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.ocean.js"></script>
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.candy.js"></script>
+</head>
+
+<body>
+
+<main>
+    <div class="dash_container" id="container">
+        <header class="container_header" id="container_header" class="header_align">
+            <span class="container_title">Dashboard</span>
+            <a href="../initial.html" class="close_btn">X</a>
+        </header>
+        
+        <div class="row">
+
+            <div class="column">
+                <div id="chart-container">Chart loading!</div>
+                <br>
+                
+            </div>
+
+            <div class="column">
+                <div class="calendar_header"><i class="fas fa-angle-left" id="left_arrow"></i>April 2020<i class="fas fa-angle-right" id="right_arrow"></i></div>
+                <table class="table_align">
+                    <tr><td class="lastmonth">29</td><td class="lastmonth">30</td><td class="lastmonth">31</td>
+                    <td class="currentmonth">1</td><td class="currentmonth">2</td><td class="currentmonth">3</td><td class="currentmonth">4</td></tr>
+                    <tr><td class="currentmonth">5</td><td class="currentmonth">6</td><td class="currentmonth">7</td><td class="currentmonth">8</td><td class="currentmonth">9</td>
+                    <td class="currentmonth">10</td><td class="currentmonth">11</td></tr>
+                    <tr><td class="currentmonth">12</td><td class="currentmonth">13</td><td class="currentmonth">14</td><td class="currentmonth">15</td>
+                    <td class="currentmonth">16</td><td class="currentmonth">17</td><td class="currentmonth">18</td></tr>
+                    <tr><td class="currentmonth">19</td><td class="currentmonth">20</td><td class="currentmonth">21</td><td class="currentmonth">22</td>
+                    <td class="currentmonth">23</td><td class="currentmonth">24</td><td class="currentmonth">25</td></tr>
+                    <tr><td class="currentmonth">26</td><td class="currentmonth">27</td><td class="currentmonth">28</td><td class="currentmonth">29</td>
+                    <td class="currentmonth">30</td><td class="nextmonth">1</td><td class="nextmonth">2</td></tr>
+                </table>
+            </div>
+
+            <div class="column">
+                <label>This is the third column!</label>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
 
 
 <!-- FusionChart Script-->
@@ -57,7 +102,7 @@
     const chartConfig = {
     type: 'column3d',
     renderAt: 'chart-container',
-    width: '40%',
+    width: '100%',
     height: '400',
     dataFormat: 'json',
     dataSource: {
@@ -66,9 +111,9 @@
             "caption": "DIRECT AIR SUPPORT CENTER CMMR - APRIL 2020",
             "subCaption": "Marine Air Support Squadron 3",
             "xAxisName": "Qualification Title",
-            "yAxisName": "Total Qualificatoin",
+            "yAxisName": "Total Qualification",
             "numberSuffix": "",
-            "theme": "zune, ocean",
+            "theme": "candy",
             },
 
         "data": chartData
@@ -80,10 +125,14 @@
     });
 
 </script>
-</head>
 
-<body>
-<div id="chart-container">Chart loading!</div>
+<!--Script to make container draggable-->
+<script>
+    $( function() {
+      $( "#container" ).draggable();
+    } );
+</script>
+
 </body>
 
 </html>

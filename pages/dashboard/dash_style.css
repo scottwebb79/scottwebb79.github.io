@@ -1,0 +1,192 @@
+
+body {
+    display: block;
+    margin-left: 40px;
+    margin-right: 40px;
+    transition: ease-in-out;
+    transition-duration: .7s;
+    height: 100%;
+}
+
+body:hover {
+    margin-left: 40px;
+    margin-right: 40px;
+    transition: ease-in-out;
+    transition-duration: .7s;
+}
+
+.dash_container {
+    margin-top: 20px;
+    display: block;
+    width:1300px;
+    height: 900px;
+    padding: 0px;
+    background-color: rgba(240, 240, 240, 0.959);
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
+    box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
+}
+
+.container_header {
+    z-index: 2;
+    padding: 1px 0px 1px 20px;
+    margin-top: -4px;
+    display: block;
+    position: sticky;
+    top: 0;
+    background-color: steelblue;
+    background-image: linear-gradient(to bottom, lightskyblue, steelblue);
+    font-family: 'Open Sans', cursive;
+    font-size: 20px;
+    cursor: move;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.container_footer {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    color: black;
+    text-align: center;
+}
+
+.container_title {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: white;
+    text-shadow:
+    -1px -1px 0 SteelBlue,  
+     1px -1px 0 SteelBlue,
+     -1px 2px 0 Black,
+      1px 2px 0 Black;
+}
+
+.close_btn {
+    background-image: linear-gradient(135deg, #d1d1d1, #606061);
+    color: #FFFFFF;
+    line-height: 20px;
+    position: absolute;
+    right: .4rem;
+    text-align: center;
+    top: .2rem;
+    width: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 10px;
+    border-radius: 46px;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.column {
+    float: left;
+    width: 32.4%;
+    height: 100%;
+    border: 1px solid #d1d1d1;
+    padding: 5px;
+
+}
+
+.row {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+.calendar_header {
+    display: inline-block;
+    float: none;
+    width: 72.4%;
+    margin-top: 15px;
+    margin-left: 15%;
+    height: auto;
+    background-image: linear-gradient(to bottom, lightskyblue, steelblue);
+    font-family: 'Open Sans', 'san serif';
+    font-size: 14px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-color: steelblue;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index:2;
+}
+
+#left_arrow {
+    margin-right: 15px;
+}
+
+#right_arrow {
+    margin-left: 15px;
+}
+
+.lastmonth {
+    background-color: #dae5ec;
+    text-align: center;
+    font-family: 'Open sans', 'san serif';
+    margin: 0px;
+}
+
+.lastmonth:hover {
+    background-color: #dae5ec86;
+    text-align: center;
+    font-family: 'Open sans', 'san serif';
+    margin: 0px;
+}
+
+.currentmonth {
+    background-color: #ffffff;
+    text-align: center;
+    font-family: 'Open sans', 'san serif';
+    margin: 0px;
+}
+
+.currentmonth:hover {
+    background-color: #f1f1f1c9;
+    text-align: center;
+    font-family: 'Open sans', 'san serif';
+    margin: 0px;
+}
+
+.nextmonth {
+    background-color: #dae5ec;
+    text-align: center;
+    font-family: 'Open sans', 'san serif';
+    margin: 0px;
+}
+
+.nextmonth:hover {
+    background-color: #dae5ec86;;
+    text-align: center;
+    font-family: 'Open sans', 'san serif';
+    margin: 0px;
+}
+
+.table_align {
+    display: inline-block;
+    float: none;
+    margin-left: 15%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    z-index: 1;
+    border-spacing: 0px;
+}
+
+.table_align td {
+    border-right: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    padding: 5px 12px 5px 12px;
+}
