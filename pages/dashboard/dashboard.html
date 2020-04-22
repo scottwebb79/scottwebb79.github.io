@@ -41,7 +41,7 @@
 
             <div class="column">
                 <div class="calendar_header"><i class="fas fa-angle-left" id="left_arrow"></i>April 2020<i class="fas fa-angle-right" id="right_arrow"></i></div>
-                <table class="table_align">
+                <table class="calendar_table">
                     <tr><td class="lastmonth">29</td><td class="lastmonth">30</td><td class="lastmonth">31</td>
                     <td class="currentmonth">1</td><td class="currentmonth">2</td><td class="currentmonth">3</td><td class="currentmonth">4</td></tr>
                     <tr><td class="currentmonth">5</td><td class="currentmonth">6</td><td class="currentmonth">7</td><td class="currentmonth">8</td><td class="currentmonth">9</td>
@@ -52,10 +52,47 @@
                     <td class="currentmonth">23</td><td class="currentmonth">24</td><td class="currentmonth">25</td></tr>
                     <tr><td class="currentmonth_bottomleft">26</td><td class="currentmonth">27</td><td class="currentmonth">28</td><td class="currentmonth">29</td>
                     <td class="currentmonth">30</td><td class="nextmonth">1</td><td class="nextmonth_bottomright">2</td></tr>
-                </table>
+                </table> <br>
 
-                <div class="pendingtasklist_header">Pending Tasks</div>
-                    
+                <div class="calendarEvent_header">Upcoming Events</div>
+                <table class="calendarEvent_table">
+                    <tr>
+                        <td class="calendarEvent_date">Date/Time</td>
+                        <td class="calendarEvent_title">Event Title</td>
+                        <td class="calendarEvent_att">Attendance</td>
+                    </tr>
+                    <tr>
+                        <td class="calendarEvent"> 29-Apr @ 1430</td>
+                        <td class="calendarEvent_middle">Instructor Training</td>
+                        <td class="calendarEvent">Mandatory</td>
+                    </tr>
+                    <tr>
+                        <td class="calendarEvent"> 05-May @ 0900</td>
+                        <td class="calendarEvent_middle">Commanders Training Update Brief</td>
+                        <td class="calendarEvent">Mandatory</td>
+                    </tr>
+                    <tr>
+                        <td class="calendarEvent">17-May @ 1000</td>
+                        <td class="calendarEvent_middle">Training Manual Review</td>
+                        <td class="calendarEvent">TBD</td>
+                    </tr>
+                    <tr>
+                        <td class="calendarEvent">18-Jun - 21-Jun</td>
+                        <td class="calendarEvent_middle">Training Exercise</td>
+                        <td class="calendarEvent">Mandatory</td>
+                    </tr>
+                    <tr>
+                        <td class="calendarEvent">24-Jun @ 0900</td>
+                        <td class="calendarEvent_middle">Post Exercise Working Group</td>
+                        <td class="calendarEvent">Mandatory</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="column">
+
+                <div class="pendingtasklist_header">Pending Tasks<button class="addTask_btn">Add Task</button></div>
+
                 <table class="task_list">
                     <tr>
                         <td class="tasklist_cl_header_first">Date Assigned</td>
@@ -77,12 +114,14 @@
                         <td class="listItem_task">Complete the messaging Page</td>
                         <td class="listItem_target">05/20/2020</td>
                     </tr>
-                </table>
-            </div>
-            </div>
+                    <tr>
+                        <td class="listItem_date">04/12/2020</td>
+                        <td class="listItem_task">Complete the Reports</td>
+                        <td class="listItem_target">06/30/2020</td>
+                    </tr>
 
-            <div class="column">
-                <label>This is the third column!</label>
+                </table>
+
             </div>
 
         </div>
