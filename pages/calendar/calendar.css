@@ -1,0 +1,146 @@
+
+body {
+    display: block;
+    margin-left: 40px;
+    margin-right: 40px;
+    transition: ease-in-out;
+    transition-duration: .7s;
+    height: 100%;
+}
+
+body:hover {
+    margin-left: 40px;
+    margin-right: 40px;
+    transition: ease-in-out;
+    transition-duration: .7s;
+}
+
+.calendar_container {
+    margin-top: 20px;
+    display: block;
+    width:1300px;
+    height: 900px;
+    padding: 0px;
+    background-color: rgba(240, 240, 240, 0.959);
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
+    box-shadow: 0px 0px 36px 3px rgba(0,0,0,1);
+}
+
+.container_header {
+    z-index: 2;
+    padding: 1px 0px 1px 20px;
+    margin-top: -4px;
+    display: block;
+    position: sticky;
+    top: 0;
+    background-color: steelblue;
+    background-image: linear-gradient(to bottom, lightskyblue, steelblue);
+    font-family: 'Open Sans', cursive;
+    font-size: 20px;
+    cursor: move;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.container_footer {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    color: black;
+    text-align: center;
+}
+
+.container_title {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    padding: 3px 0px 3px 0px;
+    font-size: 18px;
+    color: white;
+    text-shadow:
+    -1px -1px 0 SteelBlue,  
+     1px -1px 0 SteelBlue,
+     -1px 2px 0 Black,
+      1px 2px 0 Black;
+}
+
+.close_btn {
+    background-image: linear-gradient(135deg, #d1d1d1, #606061);
+    color: #FFFFFF;
+    line-height: 20px;
+    position: absolute;
+    right: .4rem;
+    text-align: center;
+    top: .2rem;
+    width: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 10px;
+    border-radius: 46px;
+    box-shadow: 1px 1px 3px #000;
+}
+
+
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flexbox_left {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    border: 1px solid #e7e7e7;
+}
+
+.flexbox_right {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border: 2px solid #e7e7e7;
+}
+
+.calendar_headerFlex {
+    margin-top: 10px;
+    width: 90%;
+    margin-left: 5%;
+    padding: 10px 5px 10px 5px;
+    background-image: linear-gradient(to bottom, lightskyblue, steelblue);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    font-family: 'Open Sans', 'sans-serif';
+    text-transform: uppercase;
+    padding: 3px 0px 3px 0px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    text-shadow:
+    -1px -1px 0 SteelBlue,  
+     1px -1px 0 SteelBlue,
+     -1px 2px 0 Black,
+      1px 2px 0 Black;
+}
+
+#left_caret {
+    float: left;
+    margin-left: 55px;
+}
+
+#right_caret {
+    float: right;
+    margin-right: 55px;
+}
+
+.main {
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+}

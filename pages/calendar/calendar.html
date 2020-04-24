@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="Keywords" content="MACCS, USMC, USMC Aviation"/>
+<meta name="Author" content="Scott C. Webb"/>
+<meta name="Viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>MACCS Training Information System</title>
+
+<link rel="stylesheet" type="text/css" href="calendar.css">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap">
+
+<script src="script.js"></script>
+<script src="js/daypilot/daypilot-all.min.js"></script>
+<body onload="myFunction()">
+
+<main>
+
+    <div class="calendar_container" id="container">
+        <header class="container_header" id="container_header" class="header_align">
+            <span class="container_title">Unit Calendar</span>
+            <a href="../initial.html" class="close_btn">X</a>
+        </header>
+
+    <section>
+        <div class="flexbox_left">
+            <div class="calendar_headerFlex" id="cal_month"><button onclick="" class="fas fa-caret-left" id="left_caret"></button><span id="calMonth"></span><button onclick="" class="fas fa-caret-right" id="right_caret"></button></div>
+
+        <div class="main">
+            <div id="dp"></div>
+          </div>
+        <script>
+            var dp = new DayPilot.Month("dp", {
+              locale: "en-us",
+              viewType: "Month",
+              showWeekend: true,
+              timeRangeSelectedHandling: "Enabled",
+              onTimeRangeSelected: function (args) {
+                DayPilot.Modal.prompt("Create a new event:", "Event 1").then(function(modal) {
+                  var dp = args.control;
+                  dp.clearSelection();
+                  if (!modal.result) { return; }
+                  dp.events.add(new DayPilot.Event({
+                    start: args.start,
+                    end: args.end,
+                    id: DayPilot.guid(),
+                    text: modal.result
+                  }));
+                });
+              },
+              eventDeleteHandling: "Update",
+              onEventDeleted: function (args) {
+                this.message("Event deleted.");
+              },
+              eventMoveHandling: "Update",
+              onEventMoved: function (args) {
+                this.message("Event moved");
+              },
+              eventResizeHandling: "Update",
+              onEventResized: function (args) {
+                this.message("Event resized");
+              },
+              eventClickHandling: "Select",
+              onEventEdited: function (args) {
+                this.message("Event selected");
+              },
+              eventHoverHandling: "Bubble",
+              bubble: new DayPilot.Bubble({
+                onLoad: function(args) {
+                  // if event object doesn't specify "bubbleHtml" property 
+                  // this onLoad handler will be called to provide the bubble HTML
+                  args.html = "Event details";
+                }
+              }),
+              contextMenu: new DayPilot.Menu({
+                items: [
+                  { text: "Delete", onClick: function(args) { var dp = args.source.calendar; dp.events.remove(args.source); } }
+                ]
+              }),
+            });
+            dp.events.list = [];
+            dp.init();
+          </script>
+        </div>
+
+        <div class="flexbox_right">
+            <p> Here will go unit tasks</p>
+        </div>
+    </section>
+<!--Script to make container draggable-->
+<script>
+    $( function() {
+      $( "#container" ).draggable();
+    } );
+</script>
+
+</body>
+
+</html>
