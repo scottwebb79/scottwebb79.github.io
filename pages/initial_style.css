@@ -33,6 +33,7 @@ body {
     height: 480px;
     max-width: 300px;
     margin-top: 50px;
+    overflow: auto;
 }
   
 .card:hover {

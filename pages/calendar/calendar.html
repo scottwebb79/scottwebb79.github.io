@@ -13,88 +13,97 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@600&display=swap">
 
 <script src="script.js"></script>
-<script src="js/daypilot/daypilot-all.min.js"></script>
+
 <body onload="myFunction()">
 
-<main>
-
+  <main>
     <div class="calendar_container" id="container">
         <header class="container_header" id="container_header" class="header_align">
             <span class="container_title">Unit Calendar</span>
             <a href="../initial.html" class="close_btn">X</a>
         </header>
 
-    <section>
+      <section>
         <div class="flexbox_left">
-            <div class="calendar_headerFlex" id="cal_month"><button onclick="" class="fas fa-caret-left" id="left_caret"></button><span id="calMonth"></span><button onclick="" class="fas fa-caret-right" id="right_caret"></button></div>
+          <table class="cal_table">
+            <span class="calendar_headerFlex" id="cal_month"><i onclick="" class="fas fa-caret-left" id="left_caret"></i><span id="calMonth"></span><i onclick="" class="fas fa-caret-right" id="right_caret"></i></span>
+              <thread>
+                <tr class="week_day"> <!-- Day of the Week Row of the Calendar-->
+                  <th class="week_day">Sunday</th>
+                  <th class="week_day">Monday</th>
+                  <th class="week_day">Tuesday</th>
+                  <th class="week_day">Wednesday</th>
+                  <th class="week_day">Thursday</th>
+                  <th class="week_day">Friday</th>
+                  <th class="week_day">Saturday</th>
+                </tr>
 
-        <div class="main">
-            <div id="dp"></div>
-          </div>
-        <script>
-            var dp = new DayPilot.Month("dp", {
-              locale: "en-us",
-              viewType: "Month",
-              showWeekend: true,
-              timeRangeSelectedHandling: "Enabled",
-              onTimeRangeSelected: function (args) {
-                DayPilot.Modal.prompt("Create a new event:", "Event 1").then(function(modal) {
-                  var dp = args.control;
-                  dp.clearSelection();
-                  if (!modal.result) { return; }
-                  dp.events.add(new DayPilot.Event({
-                    start: args.start,
-                    end: args.end,
-                    id: DayPilot.guid(),
-                    text: modal.result
-                  }));
-                });
-              },
-              eventDeleteHandling: "Update",
-              onEventDeleted: function (args) {
-                this.message("Event deleted.");
-              },
-              eventMoveHandling: "Update",
-              onEventMoved: function (args) {
-                this.message("Event moved");
-              },
-              eventResizeHandling: "Update",
-              onEventResized: function (args) {
-                this.message("Event resized");
-              },
-              eventClickHandling: "Select",
-              onEventEdited: function (args) {
-                this.message("Event selected");
-              },
-              eventHoverHandling: "Bubble",
-              bubble: new DayPilot.Bubble({
-                onLoad: function(args) {
-                  // if event object doesn't specify "bubbleHtml" property 
-                  // this onLoad handler will be called to provide the bubble HTML
-                  args.html = "Event details";
-                }
-              }),
-              contextMenu: new DayPilot.Menu({
-                items: [
-                  { text: "Delete", onClick: function(args) { var dp = args.source.calendar; dp.events.remove(args.source); } }
-                ]
-              }),
-            });
-            dp.events.list = [];
-            dp.init();
-          </script>
+                <tbody class="calendar_body">
+                  <tr>
+                    <td class="calendar_empty">29  <!-- Row 1 of the Calendar-->
+                      <span class="cal1_1_1" id="special_event">Birthday<span class="eventCircle"></span></span>
+                      <span class="cal1_1_1" id="training_event" colspan="2">WTI 1-20<span class="eventCircle"></span></span>
+                      <span class="cal1_1_1" id="veryImportant_event">SK20 IPC<span class="eventCircle"></span></span>
+                      <span class="cal1_1_1" id="mandatory_event">Weekly Sync<span class="eventCircle"></span></span>
+                      <span class="cal1_1_1" id="fyi_event">Intel Brief<span class="eventCircle"></span></span>
+                    </td>
+                    <td class="calendar_empty">30</td>
+                    <td class="calendar_empty">31</td>
+                    <td id="One" onclick="">1<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>2<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>3<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>4<textarea class="day_textarea" maxlength="102"></textarea></td>
+                  </tr>
+                  <tr>  <!-- Row 2 of the calendar-->
+                    <td>5<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>6<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>7<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>8<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>9<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>10<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>11<textarea class="day_textarea" maxlength="102"></textarea></td>
+                  </tr>
+                  <tr>  <!-- Row 3 of the calendar-->
+                    <td>12<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>13<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>14<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>15<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>16<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>17<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>18<textarea class="day_textarea" maxlength="102"></textarea></td>
+                  </tr>
+                  <tr> <!-- Row 4 of the Calendar -->
+                    <td>19<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>20<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>21<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>22<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>23<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>24<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td><span class="day_active">25</span><textarea class="day_textarea" maxlength="102"></textarea></td>
+                  </tr>
+                  <tr> <!--Row 5 of the calendar-->
+                    <td>26<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>27<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>28<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>29<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td>30<textarea class="day_textarea" maxlength="102"></textarea></td>
+                    <td class="calendar_empty">1</td>
+                    <td class="calendar_empty">2</td>
+                  </tr>
+                </tbody>
+              </thread>
+          </table>
+          <tfoot>
+            <button class="addEvent_btn">Add Event</button>
+          </tfoot>
         </div>
 
         <div class="flexbox_right">
             <p> Here will go unit tasks</p>
         </div>
-    </section>
-<!--Script to make container draggable-->
-<script>
-    $( function() {
-      $( "#container" ).draggable();
-    } );
-</script>
+      </section>
+    </div>
+</main>
 
 </body>
 
