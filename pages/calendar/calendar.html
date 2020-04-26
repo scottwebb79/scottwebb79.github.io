@@ -100,7 +100,8 @@
                     <td>18</td>
                   </tr>
                   <tr> <!-- Row 4 of the Calendar -->
-                    <td>19</td>
+                    <td>19
+                    </td>
                     <td>20</td>
                     <td>21
                       <span class="cal1_1_1" id="fyi_event">Intel Brief<span class="eventCircle"></span></span>
@@ -111,12 +112,12 @@
                     </td>
                     <td>23</td>
                     <td>24</td>
-                    <td>
-                      <span class="day_active">25</span><textarea class="day_textarea" maxlength="102"></textarea>
-                    </td>
+                    <td>25</td>
                   </tr>
                   <tr> <!--Row 5 of the calendar-->
-                    <td>26</td>
+                    <td>
+                      <span class="day_active">26</span>
+                    </td>
                     <td>27</td>
                     <td>28
                       <span class="cal1_1_1" id="fyi_event">Intel Brief<span class="eventCircle"></span></span>
@@ -133,7 +134,44 @@
               </thread>
           </table>
           <tfoot>
-            <button class="addEvent_btn">Add Event</button>
+            <button class="addEvent_btn" onclick="openForm()">Add Event</button>
+
+            <div class="form-popup" id="event_formPopup">
+              <form action="/action_page.php" class="form-container">
+                <header class="form_header">Enter New Event</header>
+            
+                <label for="short_name"><b>Event Short Name</b></label>
+                <input type="text" style="width: 100px;" placeholder="Enter Short Name" name="short_name"  maxlength="14" autofocus required>
+
+                <label for="long_name" ><br><b>Event Long Name</b></label>
+                <input type="text" style="width: 250px;" placeholder="Enter Long Name" name="long_name"  maxlength="34" required><br>
+
+                <label for="start_date"><b>Start Date</b></label>
+                <input type="date" placeholder="" name="start_date" required>
+                
+                <label for="start_time"><b>Time</b></label>
+                <input type="time" placeholder="" name="start_time" required><br>
+
+                <label for="start_date"><b>End Date</b></label>
+                <input type="date" placeholder="" name="end_date" required>
+                
+                <label for="start_time"><b>Time</b></label>
+                <input type="time" placeholder="" name="end_time" required><br>
+
+                <label for="category"><b>Category</b></label>
+                <input type="text" placeholder="" name="category" required><br>
+
+                <label for="description"><b>Description</b></label>
+                <input type="text" placeholder="" name="description"><br>
+
+
+                <div class="formFooter_btns">
+                  <button type="submit" class="btn">Submit</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </div>
+              </form>
+            </div>
+            </form>
           </tfoot>
         </div>
 

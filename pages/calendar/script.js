@@ -24,4 +24,14 @@ function myFunction() {
 function event_popup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
+};
+
+
+// When the user clicks on new event buton, open popup form
+function openForm() {
+  document.getElementById("event_formPopup").style.display = "block";
 }
+
+function closeForm() {
+  document.getElementById("event_formPopup").style.display = "none";
+};
