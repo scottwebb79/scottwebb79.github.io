@@ -228,6 +228,13 @@ z-index: 3;
     padding-left: 4px;
     overflow:none;
     margin-bottom: 2px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #special_event{
@@ -259,3 +266,55 @@ z-index: 3;
     margin-right: 5px;
     background-color: white;
 }
+
+/* Popup container - can be anything you want */
+
+  
+  /* The actual popup */
+  .cal1_1_1 .popuptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 8px 3px 8px 3px;
+    position: absolute;
+    z-index: 1;
+    top: 200%;
+    left: 150%;
+    margin-left: -80px;
+    text-align: left;
+    font-size: 10px;
+  }
+  
+  /* Popup arrow */
+  .cal1_1_1 .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+    transform: rotate(180deg);
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .cal1_1_1 .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
