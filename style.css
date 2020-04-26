@@ -182,7 +182,7 @@ button:hover {
 .body_iframe {
     display: flexbox;
     height: 1000px;
-    width:100%;
+    width: 90%;
     border: none;
     padding-left: 175px;
     overflow:hidden;
@@ -192,7 +192,6 @@ button:hover {
 .body_iframe:hover {
     display:flexbox;
     height: 1000px;
-    width: 100%;
     padding-left: 50px;
     overflow:hidden;
     transition: .7s;
