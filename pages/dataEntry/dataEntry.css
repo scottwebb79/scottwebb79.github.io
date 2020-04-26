@@ -47,12 +47,13 @@ body:hover {
     position: fixed;
     top: 0;
     width: 100%;
-  }
+}
 
 span {
     display: inline-block;
     vertical-align: middle;
 }
+
 .h1 {
     display: block;
     font-family: "Open Sans", sans-serif;
@@ -110,6 +111,7 @@ span {
     display: table;
     clear: both;
 }
+
 /* Styling for the forms */
 
 label {
@@ -171,24 +173,26 @@ input[type=range] {
     width: 160px;
     outline: none;
     background-color:rgba(240, 240, 240, 0.959);
-  }
+}
 
-  /** FF*/
-  input[type="range"]::-moz-range-progress {
+
+input[type="range"]::-moz-range-progress {
     background-color: lightskyblue;
     border-radius: 3px;
-  }
-  input[type="range"]::-moz-range-track {  
+}
+
+input[type="range"]::-moz-range-track {  
     background-color: gray;
-  }
-  /* IE*/
-  input[type="range"]::-ms-fill-lower {
+}
+
+input[type="range"]::-ms-fill-lower {
     background-color: #007AFF;
     border-radius: 3px;
-  }
-  input[type="range"]::-ms-fill-upper {  
+}
+
+input[type="range"]::-ms-fill-upper {  
     background-color: #C7C7CC;
-  }
+}
 
 .studentComment {
     width: 97%;
@@ -239,7 +243,7 @@ input[type=range] {
 }
 
 .event_input {
-    width: 360px;
+    width: 220px;
     margin-bottom: 5px;
     border-radius: 4px;    
 }
@@ -251,28 +255,30 @@ input[type=range] {
 }
 
 .addEvent_btn {
-	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
-	background-color:#79bbff;
-	border-radius:20px;
-	border:2px solid #84bbf3;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:10px;
-	font-weight:bold;
-	padding:3px 16px;
-	text-decoration:none;
-	text-shadow:2px 1px 0px #528ecc;
+    box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    background-color:#79bbff;
+    border-radius:20px;
+    border:2px solid #84bbf3;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    font-weight:bold;
+    padding:3px 16px;
+    text-decoration:none;
+    text-shadow:2px 1px 0px #528ecc;
 }
+
 .addEvent_btn:hover {
-	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
-	background-color:#378de5;
+    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color:#378de5;
 }
+
 .addEvent_btn:active {
-	position:relative;
-	top:1px;
+    position:relative;
+    top:1px;
 }
 
 .container_footer {
@@ -292,7 +298,6 @@ input[type=range] {
 
 .formExport_btn {
     display: table-cell;
-    float: left;
     margin-left: 15px;
 	box-shadow:inset 0px 0px 0px 0px #bbdaf7;
 	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
@@ -322,7 +327,6 @@ input[type=range] {
 
 .formSubmit_btn {
     display: table-cell;
-    float: right;
     margin-right: 15px;
 	box-shadow:inset 0px 0px 0px 0px #bbdaf7;
 	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
@@ -350,7 +354,6 @@ input[type=range] {
 
 .formCancel_btn {
     display: table-cell;
-    float: right;
     margin-right: 15px;
 	box-shadow:inset 0px 0px 0px 0px #ffffff;
 	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
@@ -387,10 +390,12 @@ input[type=range] {
     margin: 0 auto 1rem;
     border: 1px solid #d1d1d1;
   }
-  .range {
+
+.range {
     width: 100px;
-  }
-  .bubble {
+}
+
+.bubble {
     background-image: linear-gradient(to bottom, lightskyblue, steelblue);
     color: white;
     padding: 4px 12px;
@@ -400,8 +405,9 @@ input[type=range] {
     transform: translateX(-50%);
     font-size: 12px;
     margin-top: 32px;
-  }
-  .bubble::after {
+}
+
+.bubble::after {
     content: "";
     position: absolute;
     width: 2px;
@@ -409,7 +415,7 @@ input[type=range] {
     background: lightskyblue;
     top: -1px;
     left: 50%;
-  }
+}
 
 
 .perfRateLabel {
@@ -421,9 +427,13 @@ input[type=range] {
 /* Responsive layout - Change from 1 Row, 2 Columns to 1 Row, 1 Column when Media width display > 600px */
 @media screen and (max-width: 600px) {
     .column {
-        width: 100%;
+        width: 97%;
+        margin-left: 2px;
     }
 
+    .row {
+        width: 100%;
+    }
     .body {
         margin: 0px -12px 0px 0px;
         padding: 0px;
@@ -435,7 +445,7 @@ input[type=range] {
     }
 
     .dataEntry_Container {
-        width: 100%;
+        width: 111%;
         height: 100%;
     }
     
@@ -451,7 +461,7 @@ input[type=range] {
         margin-left: 3px;
     }
 
-    .modal_input {
-        width: 170px;
+    .formExport_btn {
+        display: none;
     }
-}
+}    
