@@ -194,6 +194,10 @@ input[type="range"]::-ms-fill-upper {
     background-color: #C7C7CC;
 }
 
+.range {
+    width: 70%;
+    margin-left: 15%;
+}
 .studentComment {
     width: 97%;
     height: 60px;
@@ -468,5 +472,9 @@ input[type="range"]::-ms-fill-upper {
         display: block;
         width: 100%;
         margin: 0px;
+    }
+    .range {
+        width: 70%;
+        margin-left: 15%;
     }
 }    
