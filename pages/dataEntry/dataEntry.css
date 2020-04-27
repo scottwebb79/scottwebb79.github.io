@@ -427,7 +427,7 @@ input[type="range"]::-ms-fill-upper {
 /* Responsive layout - Change from 1 Row, 2 Columns to 1 Row, 1 Column when Media width display > 600px */
 @media screen and (max-width: 600px) {
     .column {
-        width: 97%;
+        width: 98%;
         margin-left: 2px;
     }
 
@@ -450,18 +450,23 @@ input[type="range"]::-ms-fill-upper {
     }
     
     #traineeName {
-        width: 97%;
+        width: 100%;
         text-align: left;
-        margin-left: 3px;
-    }
+      }
 
     #instructorName {
-        width: 97%;
+        width: 100%;
         text-align: left;
         margin-left: 3px;
     }
 
     .formExport_btn {
         display: none;
+    }
+
+    .form_input {
+        display: block;
+        width: 100%;
+        margin: 0px;
     }
 }    

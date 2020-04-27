@@ -35,7 +35,7 @@
                     <div class="entry_form" >
                         <fieldset name="student_info">
                         <legend class="left_Heading">Trainee Information</legend>
-                        <label for="traineeName">Trainee:</label><input type="text" class="form_input" id="traineeName" placeholder="Rank LastName, FirstName" style="width: 50%;" autofocus required /> <!-- I am aware that autofocus does not work within an iframe because of autofocus stealing concerns-->
+                        <label for="traineeName">Trainee:</label><input type="text" class="form_input" id="traineeName" placeholder="Rank LastName, FirstName" autofocus required /> <!-- I am aware that autofocus does not work within an iframe because of autofocus stealing concerns-->
                         <label for="traineeBillet">Trainee Billet:</label><select id="traineeBillet" class="form_input" required>
                             <option disabled selected value>-Select-</option>
                             <option value="ACR">ACR</option>
@@ -47,16 +47,18 @@
                             <option value="HD">HD</option>
                             <option value="TAD">TAD</option>
                             <option value="SAD">SAD</option>
+                            <option value="AVCOMM">AVCOMM</option>
+                            <option value="TDS">TDS</option>
                             <option value="DCHF">DASC Chief</option>
                             <option value="DOIC">DASC OIC</option>
                             <option value="OTHER">Other</option>
                         </select><br>
-                        <label for="traineeEmail">Trainee Email:</label><input type="email" class="form_input" id="traineeEmail" style="width: 50%;" placeholder="trainee@domain.com" required /><br>
+                        <label for="traineeEmail">Trainee Email:</label><input type="email" class="form_input" id="traineeEmail" placeholder="trainee@domain.com" required /><br>
                         </fieldset>
 
                         <fieldset name="instructor_info">
                         <legend class="left_Heading">Instructor Information</legend>
-                        <label for="instructorName">Instructor:</label><input type="text" class="form_input" id="instructorName" placeholder="Rank LastName, FirstName" style="width:50%" required/><br>
+                        <label for="instructorName">Instructor:</label><input type="text" class="form_input" id="instructorName" placeholder="Rank LastName, FirstName" required/><br>
                         <label for="instructorBillet">Instructor Billet:</label>
                         <select id="instructorBillet" class="form_input" required>
                             <option disabled selected value>-Select-</option>
@@ -74,12 +76,12 @@
                             <option value="instDesgWTI">WTI</option>
                         </select><br>
                         
-                        <label for="instEmail">Instructor Email:</label><input type="email" class="form_input" id="instEmail" style="width: 50%;" placeholder="instructor@domain.com" required /><br>
+                        <label for="instEmail">Instructor Email:</label><input type="email" class="form_input" id="instEmail" placeholder="instructor@domain.com" required /><br>
                         </fieldset>
 
                         <fieldset name="Exercise_Info">
                         <legend class="left_Heading">Exercise / Deployment Information</legend>
-                        <label for="exerciseName">Exercise:</label><input type="text" class="form_input" id="exerciseName" placeholder="Enter Exercise or Deployment Name"  style="width:200px;" required/>
+                        <label for="exerciseName">Exercise:</label><input type="text" class="form_input" id="exerciseName" placeholder="Enter Exercise or Deployment Name" required/>
                         <label for="startDate">Start Date:</label><input type="date" class="form_input" id="startDate" value="" required>
                         <label for="endDate">End Date:</label><input type="date" class="form_input" id="endDate" value="" required><br>
                         </fieldset>
