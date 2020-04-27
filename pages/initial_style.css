@@ -81,6 +81,10 @@ body {
     padding: 4px;
 }
 
+.row {
+    margin-left: 80px;
+}
+
 .row:after {
     content: "";
     display: table;
@@ -115,6 +119,7 @@ textarea {
     height: 300px;
     width: 90%;
     margin-top: 50px;
+    margin-left: 80px;
 }
 
 #div1, #div2 {
@@ -145,8 +150,35 @@ textarea {
 
     .geolocation {
         padding-left: 5px;
+        margin-left: 25px;
         height: 50px;
         width: 90%;
         border: 1px solid white;
         color: white;
+    }
+
+    .main {
+        margin-left: 25px;
+    }
+
+    .row {
+        margin-left: 20px;
+    }
+
+    textarea {
+        margin-left:20px;
+        margin-top: 20px;
+    }
+    
+    h4 {
+        margin-left: 20px;
+    }
+
+    #div1 {
+        margin-left: 20px;
+    }
+
+    .geo_btn {
+        margin-top: 10px;
+        margin-left: 25px;
     }
