@@ -126,3 +126,27 @@ textarea {
     border: 1px solid black;
     background-color: white;
 }
+
+.geolocation {
+    padding-left: 5px; 
+    height: 50px; 
+    width:250px;
+    border:1px solid white;
+    color: white;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+
+    .column {
+        width: 100%;
+    }
+}
+
+    .geolocation {
+        padding-left: 5px;
+        height: 50px;
+        width: 90%;
+        border: 1px solid white;
+        color: white;
+    }
