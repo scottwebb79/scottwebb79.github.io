@@ -19,16 +19,15 @@
 
   <main>
     <div class="calendar_container" id="container">
-        <header class="container_header" id="container_header" class="header_align">
+        <header class="container_header" id="container_header">
             <span class="container_title">Unit Calendar</span>
             <a href="../initial.html" class="close_btn">X</a>
         </header>
 
       <section>
         <div class="flexbox_left">
+          <span class="calendar_headerFlex" id="cal_month"><i onclick="" class="fas fa-caret-left" id="left_caret"></i><span id="calMonth"></span><i onclick="" class="fas fa-caret-right" id="right_caret"></i></span>
           <table class="cal_table">
-            <span class="calendar_headerFlex" id="cal_month"><i onclick="" class="fas fa-caret-left" id="left_caret"></i><span id="calMonth"></span><i onclick="" class="fas fa-caret-right" id="right_caret"></i></span>
-              <thread>
                 <tr class="week_day"> <!-- Day of the Week Row of the Calendar-->
                   <th class="week_day">Sunday</th>
                   <th class="week_day">Monday</th>
@@ -42,27 +41,27 @@
                 <tbody class="calendar_body">
                   <tr>
                     <td class="calendar_empty">29  <!-- Row 1 of the Calendar-->
-                      <span class="cal1_1_1" id="special_event" onclick="event_popup()">Personal<span class="eventCircle"></span>
+                      <span class="special_event" id="special_event" onclick="event_popup()">Personal<span class="eventCircle"></span>
                         <span class="popuptext" id="myPopup"><strong>Event Name:</strong> Birthday<br><strong>Date: 29 February 2020</strong><br><strong>Time:</strong> 0900L<br><strong>Event Description:</strong> GySgt Scott C. Webb's birthday!</span>
                     </span>
 
 
 
-                      <span class="cal1_1_1" id="training_event" colspan="2">Exercise<span class="eventCircle"></span></span>
-                      <span class="cal1_1_1" id="veryImportant_event">Classes<span class="eventCircle"></span></span>
-                      <span class="cal1_1_1" id="mandatory_event">Important Brief<span class="eventCircle"></span></span>
-                      <span class="cal1_1_1" id="fyi_event">Non-Essential<span class="eventCircle"></span></span>
+                      <span class="training_event">Exercise<span class="eventCircle"></span></span>
+                      <span class="veryImportant_event">Classes<span class="eventCircle"></span></span>
+                      <span class="mandatory_event">Important Brief<span class="eventCircle"></span></span>
+                      <span class="fyi_event">Non-Essential<span class="eventCircle"></span></span>
                     </td>
                     <td class="calendar_empty">30</td>
                     <td class="calendar_empty">31
-                      <span class="cal1_1_1" id="fyi_event">Intel Brief<span class="eventCircle"></span></span>
-                      <span class="cal1_1_1" id="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
+                      <span class="fyi_event">Intel Brief<span class="eventCircle"></span></span>
+                      <span class="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
                     </td>
                     <td>1
                     </td>
                     <td>2
-                      <span class="cal1_1_1" id="veryImportant_event">ACAD-2055<span class="eventCircle"></span></span>
-                      <span class="cal1_1_1" id="veryImportant_event">CSWF-2042<span class="eventCircle"></span></span>
+                      <span class="veryImportant_event">ACAD-2055<span class="eventCircle"></span></span>
+                      <span class="veryImportant_event">CSWF-2042<span class="eventCircle"></span></span>
                     </td>
                     <td>3</td>
                     <td>4</td>
@@ -71,11 +70,11 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7
-                      <span class="cal1_1_1" id="fyi_event">Intel Brief<span class="eventCircle"></span></span>
-                      <span class="cal1_1_1" id="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
+                      <span class="fyi_event">Intel Brief<span class="eventCircle"></span></span>
+                      <span class="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
                     </td>
                     <td>8
-                      <span class="cal1_1_1" id="veryImportant_event">TDL-2821<span class="eventCircle"></span></span>
+                      <span class="veryImportant_event">TDL-2821<span class="eventCircle"></span></span>
                     </td>
 
                     <td>9
@@ -89,12 +88,12 @@
                     <td>12</td>
                     <td>13</td>
                     <td>14
-                      <span class="cal1_1_1" id="fyi_event">Intel Brief<span class="eventCircle"></span></span>
-                      <span class="cal1_1_1" id="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
+                      <span class="fyi_event">Intel Brief<span class="eventCircle"></span></span>
+                      <span class="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
                     </td>
                     <td>15</td>
                     <td>16
-                      <span class="cal1_1_1" id="veryImportant_event">TDL-2822<span class="eventCircle"></span></span>
+                      <span class="veryImportant_event">TDL-2822<span class="eventCircle"></span></span>
                     </td>
                     <td>17</td>
                     <td>18</td>
@@ -104,11 +103,11 @@
                     </td>
                     <td>20</td>
                     <td>21
-                      <span class="cal1_1_1" id="fyi_event">Intel Brief<span class="eventCircle"></span></span>
-                      <span class="cal1_1_1" id="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
+                      <span class="fyi_event">Intel Brief<span class="eventCircle"></span></span>
+                      <span class="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
                     </td>
                     <td>22
-                      <span class="cal1_1_1" id="veryImportant_event">TDL-2803<span class="eventCircle"></span></span>
+                      <span class="veryImportant_event">TDL-2803<span class="eventCircle"></span></span>
                     </td>
                     <td>23</td>
                     <td>24</td>
@@ -120,65 +119,61 @@
                     </td>
                     <td>27</td>
                     <td>28
-                      <span class="cal1_1_1" id="fyi_event">Intel Brief<span class="eventCircle"></span></span>
-                      <span class="cal1_1_1" id="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
+                      <span class="fyi_event">Intel Brief<span class="eventCircle"></span></span>
+                      <span class="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
                     </td>
                     <td>29
-                      <span class="cal1_1_1" id="special_event">DRRS-MC<span class="eventCircle"></span></span>
+                      <span class="special_event">DRRS-MC<span class="eventCircle"></span></span>
                     </td>
                     <td>30</td>
                     <td class="calendar_empty">1</td>
                     <td class="calendar_empty">2</td>
                   </tr>
                 </tbody>
-              </thread>
-          </table>
-          <tfoot>
-            <button class="addEvent_btn" onclick="openForm()">Add Event</button>
+              </table>
 
-            <div class="form-popup" id="event_formPopup">
-              <form action="/action_page.php" class="form-container">
-                <header class="form_header">Enter New Event</header>
-            
-                <label for="short_name"><b>Event Short Name</b></label>
-                <input type="text" style="width: 100px;" placeholder="Enter Short Name" name="short_name"  maxlength="14" autofocus required>
+              <button class="addEvent_btn" onclick="openForm()">Add Event</button>
 
-                <label for="long_name" ><br><b>Event Long Name</b></label>
-                <input type="text" style="width: 250px;" placeholder="Enter Long Name" name="long_name"  maxlength="34" required><br>
-
-                <label for="start_date"><b>Start Date</b></label>
-                <input type="date" placeholder="" name="start_date" required>
-                
-                <label for="start_time"><b>Time</b></label>
-                <input type="time" placeholder="" name="start_time" required><br>
-
-                <label for="start_date"><b>End Date</b></label>
-                <input type="date" placeholder="" name="end_date" required>
-                
-                <label for="start_time"><b>Time</b></label>
-                <input type="time" placeholder="" name="end_time" required><br>
-
-                <label for="category"><b>Category</b></label>
-                <input type="text" placeholder="" name="category" required><br>
-
-                <label for="description"><b>Description</b></label>
-                <input type="text" placeholder="" name="description"><br>
-
-
-                <div class="formFooter_btns">
-                  <button type="submit" class="btn">Submit</button>
-                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                </div>
-              </form>
-            </div>
+              <div class="form-popup" id="event_formPopup">
+            <form action="/action_page.php" class="form-container">
+              <header class="form_header">Enter New Event</header>
+          
+              <label><b>Event Short Name</b></label>
+              <input type="text" style="width: 100px;" placeholder="Enter Short Name" name="short_name"  maxlength="14" autofocus required>
+  
+              <label><br><b>Event Long Name</b></label>
+              <input type="text" style="width: 250px;" placeholder="Enter Long Name" name="long_name"  maxlength="34" required><br>
+  
+              <label><b>Start Date</b></label>
+              <input type="date" name="start_date" required>
+              
+              <label><b>Time</b></label>
+              <input type="time" name="start_time" required><br>
+  
+              <label><b>End Date</b></label>
+              <input type="date" name="end_date" required>
+              
+              <label><b>Time</b></label>
+              <input type="time" name="end_time" required><br>
+  
+              <label><b>Category</b></label>
+              <input type="text" name="category" required><br>
+  
+              <label><b>Description</b></label>
+              <input type="text" name="description"><br>
+  
+  
+              <div class="formFooter_btns">
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </div>
             </form>
-          </tfoot>
+          </div>
         </div>
-
+      </section>
         <div class="flexbox_right">
             <p> Here will go unit tasks</p>
         </div>
-      </section>
     </div>
 </main>
 

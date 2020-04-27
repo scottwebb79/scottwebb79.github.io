@@ -324,7 +324,6 @@ input[type="range"]::-ms-fill-upper {
 }
 
 #pass_input {
-    float: right;
     margin-top: 11px;
     margin-right: 8px;
 }

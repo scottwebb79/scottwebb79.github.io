@@ -221,7 +221,8 @@ box-shadow: 1px 1px 3px #000;
 z-index: 3;
 }
 
-.cal1_1_1 {
+.special_event{
+    background-image: linear-gradient(to right, rgb(161, 213, 255) 65%,rgb(47, 160, 226))!important;
     display:block;
     border-radius: 4px;
     width: 95%;
@@ -237,24 +238,72 @@ z-index: 3;
     user-select: none;
 }
 
-#special_event{
-    background-image: linear-gradient(to right, rgb(161, 213, 255) 65%,rgb(47, 160, 226))!important;
-}
-
-#training_event {
+.training_event {
     background-image: linear-gradient(to right, rgb(144, 211, 144) 65%, rgb(66, 129, 66))!important;
+    display:block;
+    border-radius: 4px;
+    width: 95%;
+    padding-left: 4px;
+    overflow:none;
+    margin-bottom: 2px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-#mandatory_event {
+.mandatory_event {
     background-image: linear-gradient(to right, rgb(255, 216, 172) 65%, rgb(194, 107, 35))!important;
+    display:block;
+    border-radius: 4px;
+    width: 95%;
+    padding-left: 4px;
+    overflow:none;
+    margin-bottom: 2px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-#veryImportant_event {
+.veryImportant_event {
     background-image: linear-gradient(to right, rgb(255, 177, 172) 65%, rgb(155, 14, 14))!important;
+    display:block;
+    border-radius: 4px;
+    width: 95%;
+    padding-left: 4px;
+    overflow:none;
+    margin-bottom: 2px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-#fyi_event {
+.fyi_event {
     background-image: linear-gradient(to right, rgb(174, 172, 255) 65%, rgb(80, 14, 155))!important;
+    display:block;
+    border-radius: 4px;
+    width: 95%;
+    padding-left: 4px;
+    overflow:none;
+    margin-bottom: 2px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     left: 0;
 }
 
@@ -271,7 +320,7 @@ z-index: 3;
 
   
   /* The actual popup */
-  .cal1_1_1 .popuptext {
+  .special_event .popuptext {
     visibility: hidden;
     width: 220px;
     background-color: white;
@@ -289,7 +338,7 @@ z-index: 3;
   }
   
   /* Popup arrow */
-  .cal1_1_1 .popuptext::after {
+  .special_event .popuptext::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -302,7 +351,7 @@ z-index: 3;
   }
   
   /* Toggle this class - hide and show the popup */
-  .cal1_1_1 .show {
+  .special_event .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
