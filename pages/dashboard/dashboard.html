@@ -20,6 +20,67 @@
 <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.zune.js"></script>
 <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.ocean.js"></script>
 <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.candy.js"></script>
+
+<!-- FusionChart Script-->
+<script type="text/javascript">
+
+    const chartData = [{
+        "label": "SAD",
+        "value": "1"
+    }, {
+        "label": "TAD",
+        "value": "4"
+    }, {
+        "label": "HD",
+        "value": "4"
+    }, {
+        "label": "CC",
+        "value": "1"
+    }, {
+        "label": "IDM",
+        "value": "2"
+    }, {
+        "label": "TCDS",
+        "value": "4"
+    }, {
+        "label": "TRHR",
+        "value": "3"
+    }, {
+        "label": "FSC",
+        "value": "4"
+    }, {
+        "label": "ACR",
+        "value": "7"
+    }
+    ];
+
+    const chartConfig = {
+    type: 'column3d',
+    renderAt: 'chart-container',
+    width: '100%',
+    height: '400',
+    dataFormat: 'json',
+    dataSource: {
+ 
+        "chart": {
+            "caption": "DIRECT AIR SUPPORT CENTER CMMR - APRIL 2020",
+            "subCaption": "Marine Air Support Squadron 3",
+            "xAxisName": "Qualification Title",
+            "yAxisName": "Total Qualification",
+            "numberSuffix": "",
+            "theme": "candy",
+            },
+
+        "data": chartData
+        }
+    };
+    FusionCharts.ready(function(){
+    var fusioncharts = new FusionCharts(chartConfig);
+    fusioncharts.render();
+    });
+
+</script>
+
 </head>
 
 <body>
@@ -129,67 +190,6 @@
     </div>
 
 </main>
-
-
-<!-- FusionChart Script-->
-<script type="text/javascript">
-
-    const chartData = [{
-        "label": "SAD",
-        "value": "1"
-    }, {
-        "label": "TAD",
-        "value": "4"
-    }, {
-        "label": "HD",
-        "value": "4"
-    }, {
-        "label": "CC",
-        "value": "1"
-    }, {
-        "label": "IDM",
-        "value": "2"
-    }, {
-        "label": "TCDS",
-        "value": "4"
-    }, {
-        "label": "TRHR",
-        "value": "3"
-    }, {
-        "label": "FSC",
-        "value": "4"
-    }, {
-        "label": "ACR",
-        "value": "7"
-    }
-    ];
-
-    const chartConfig = {
-    type: 'column3d',
-    renderAt: 'chart-container',
-    width: '100%',
-    height: '400',
-    dataFormat: 'json',
-    dataSource: {
- 
-        "chart": {
-            "caption": "DIRECT AIR SUPPORT CENTER CMMR - APRIL 2020",
-            "subCaption": "Marine Air Support Squadron 3",
-            "xAxisName": "Qualification Title",
-            "yAxisName": "Total Qualification",
-            "numberSuffix": "",
-            "theme": "candy",
-            },
-
-        "data": chartData
-        }
-    };
-    FusionCharts.ready(function(){
-    var fusioncharts = new FusionCharts(chartConfig);
-    fusioncharts.render();
-    });
-
-</script>
 
 <!--Script to make container draggable-->
 <script>
