@@ -18,164 +18,185 @@
 <body onload="myFunction()">
 
   <main>
-    <div class="calendar_container" id="container">
-        <header class="container_header" id="container_header">
-            <span class="container_title">Unit Calendar</span>
+
+  <div class="container" id="container">
+    <header class="container_header" id="container_header">
+          <span class="container_title">Unit Calendar</span>
             <a href="../initial.html" class="close_btn">X</a>
-        </header>
+     </header>
+     <section>
+     <div class="flexbox_left">
+        <span class="calendar_headerFlex" id="cal_month"><i onclick="" class="fas fa-caret-left" id="left_caret"></i><span id="calMonth"></span><i onclick="" class="fas fa-caret-right" id="right_caret"></i></span>
 
-      <section>
-        <div class="flexbox_left">
-          <span class="calendar_headerFlex" id="cal_month"><i onclick="" class="fas fa-caret-left" id="left_caret"></i><span id="calMonth"></span><i onclick="" class="fas fa-caret-right" id="right_caret"></i></span>
-          <table class="cal_table">
-                <tr class="week_day"> <!-- Day of the Week Row of the Calendar-->
-                  <th class="week_day">Sunday</th>
-                  <th class="week_day">Monday</th>
-                  <th class="week_day">Tuesday</th>
-                  <th class="week_day">Wednesday</th>
-                  <th class="week_day">Thursday</th>
-                  <th class="week_day">Friday</th>
-                  <th class="week_day">Saturday</th>
-                </tr>
-
+        <table class="cal_table">
+          <tr class="week_day"> <!-- Day of the Week Row of the Calendar-->
+            <th class="week_day">Sunday</th>
+            <th class="week_day">Monday</th>
+            <th class="week_day">Tuesday</th>
+            <th class="week_day">Wednesday</th>
+            <th class="week_day">Thursday</th>
+            <th class="week_day">Friday</th>
+            <th class="week_day">Saturday</th>
+          </tr>
                 <tbody class="calendar_body">
+
                   <tr>
-                    <td class="calendar_empty">29  <!-- Row 1 of the Calendar-->
-                      <span class="special_event" id="special_event" onclick="event_popup()">Personal<span class="eventCircle"></span>
+                    <td class="calendar_empty" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="div_day_1"></span>  <!-- Row 1 of the Calendar-->
+                      <span class="special_event" id="special_event"  draggable="true" ondragstart="drag(event)" onclick="event_popup()">Personal<span class="eventCircle"></span>
                         <span class="popuptext" id="myPopup"><strong>Event Name:</strong> Birthday<br><strong>Date: 29 February 2020</strong><br><strong>Time:</strong> 0900L<br><strong>Event Description:</strong> GySgt Scott C. Webb's birthday!</span>
-                    </span>
+                      </span>
 
-
-
-                      <span class="training_event">Exercise<span class="eventCircle"></span></span>
-                      <span class="veryImportant_event">Classes<span class="eventCircle"></span></span>
-                      <span class="mandatory_event">Important Brief<span class="eventCircle"></span></span>
-                      <span class="fyi_event">Non-Essential<span class="eventCircle"></span></span>
+                      <span class="training_event" draggable="true" ondragstart="drag(event)" id="drag2">Exercise<span class="eventCircle"></span></span>
+                      <span class="veryImportant_event" draggable="true" ondragstart="drag(event)" id="drag3">Classes<span class="eventCircle"></span></span>
+                      <span class="mandatory_event" draggable="true" ondragstart="drag(event)" id="drag4">Important Brief<span class="eventCircle"></span></span>
+                      <span class="fyi_event" draggable="true" ondragstart="drag(event)" id="drag111">Non-Essential<span class="eventCircle"></span></span>
                     </td>
-                    <td class="calendar_empty">30</td>
-                    <td class="calendar_empty">31
-                      <span class="fyi_event">Intel Brief<span class="eventCircle"></span></span>
-                      <span class="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
+                    <td class="calendar_empty"  id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">30</td>
+                    <td class="calendar_empty" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">31
+                      <span class="fyi_event" draggable="true" ondragstart="drag(event)" id="drag5">Intel Brief<span class="eventCircle"></span></span>
+                      <span class="mandatory_event" draggable="true" ondragstart="drag(event)" id="drag6">Cmdrs Update<span class="eventCircle"></span></span>
                     </td>
-                    <td>1
+                    <td id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">1
                     </td>
-                    <td>2
-                      <span class="veryImportant_event">ACAD-2055<span class="eventCircle"></span></span>
-                      <span class="veryImportant_event">CSWF-2042<span class="eventCircle"></span></span>
+                    <td id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">2
+                      <span class="veryImportant_event" draggable="true" ondragstart="drag(event)" id="drag7">ACAD-2055<span class="eventCircle"></span></span>
+                      <span class="veryImportant_event" draggable="true" ondragstart="drag(event)" id="drag8">CSWF-2042<span class="eventCircle"></span></span>
                     </td>
-                    <td>3</td>
-                    <td>4</td>
+                    <td id="div6" ondrop="drop(event)" ondragover="allowDrop(event)">3</td>
+                    <td id="div7" ondrop="drop(event)" ondragover="allowDrop(event)">4</td>
                   </tr>
+
                   <tr>  <!-- Row 2 of the calendar-->
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7
-                      <span class="fyi_event">Intel Brief<span class="eventCircle"></span></span>
-                      <span class="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
+                    <td id="div8" ondrop="drop(event)" ondragover="allowDrop(event)">5</td>
+                    <td id="div9" ondrop="drop(event)" ondragover="allowDrop(event)">6</td>
+                    <td id="div10" ondrop="drop(event)" ondragover="allowDrop(event)">7
+                      <span class="fyi_event" draggable="true" ondragstart="drag(event)" id="drag9">Intel Brief<span class="eventCircle"></span></span>
+                      <span class="mandatory_event" draggable="true" ondragstart="drag(event)" id="drag10">Cmdrs Update<span class="eventCircle"></span></span>
                     </td>
-                    <td>8
-                      <span class="veryImportant_event">TDL-2821<span class="eventCircle"></span></span>
+                    <td id="div11" ondrop="drop(event)" ondragover="allowDrop(event)">8
+                      <span class="veryImportant_event" draggable="true" ondragstart="drag(event)" id="drag11">TDL-2821<span class="eventCircle"></span></span>
                     </td>
 
-                    <td>9
+                    <td id="div12" ondrop="drop(event)" ondragover="allowDrop(event)">9
                     </td>
-                    <td>10
+                    <td id="div13" ondrop="drop(event)" ondragover="allowDrop(event)">10
                     </td>
-                    <td>11
+                    <td id="div14" ondrop="drop(event)" ondragover="allowDrop(event)">11
                     </td>
                   </tr>
+
                   <tr>  <!-- Row 3 of the calendar-->
-                    <td>12</td>
-                    <td>13</td>
-                    <td>14
-                      <span class="fyi_event">Intel Brief<span class="eventCircle"></span></span>
-                      <span class="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
+                    <td id="div15" ondrop="drop(event)" ondragover="allowDrop(event)">12</td>
+                    <td id="div16" ondrop="drop(event)" ondragover="allowDrop(event)">13</td>
+                    <td id="div17" ondrop="drop(event)" ondragover="allowDrop(event)">14
+                      <span class="fyi_event" draggable="true" ondragstart="drag(event)" id="drag12">Intel Brief<span class="eventCircle"></span></span>
+                      <span class="mandatory_event" draggable="true" ondragstart="drag(event)" id="drag13">Cmdrs Update<span class="eventCircle"></span></span>
                     </td>
-                    <td>15</td>
-                    <td>16
-                      <span class="veryImportant_event">TDL-2822<span class="eventCircle"></span></span>
+                    <td id="div18" ondrop="drop(event)" ondragover="allowDrop(event)">15</td>
+                    <td id="div19" ondrop="drop(event)" ondragover="allowDrop(event)">16
+                      <span class="veryImportant_event" draggable="true" ondragstart="drag(event)" id="drag14">TDL-2822<span class="eventCircle"></span></span>
                     </td>
-                    <td>17</td>
-                    <td>18</td>
+                    <td id="div20" ondrop="drop(event)" ondragover="allowDrop(event)">17</td>
+                    <td id="div21" ondrop="drop(event)" ondragover="allowDrop(event)">18</td>
                   </tr>
+
                   <tr> <!-- Row 4 of the Calendar -->
-                    <td>19
+                    <td id="div22" ondrop="drop(event)" ondragover="allowDrop(event)">19
                     </td>
-                    <td>20</td>
-                    <td>21
-                      <span class="fyi_event">Intel Brief<span class="eventCircle"></span></span>
-                      <span class="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
+                    <td id="div23" ondrop="drop(event)" ondragover="allowDrop(event)">20</td>
+                    <td id="div24" ondrop="drop(event)" ondragover="allowDrop(event)">21
+                      <span class="fyi_event" draggable="true" ondragstart="drag(event)" id="drag15">Intel Brief<span class="eventCircle"></span></span>
+                      <span class="mandatory_event" draggable="true" ondragstart="drag(event)" id="drag16">Cmdrs Update<span class="eventCircle"></span></span>
                     </td>
-                    <td>22
-                      <span class="veryImportant_event">TDL-2803<span class="eventCircle"></span></span>
+                    <td id="div25" ondrop="drop(event)" ondragover="allowDrop(event)">22
+                      <span class="veryImportant_event" draggable="true" ondragstart="drag(event)" id="drag17">TDL-2803<span class="eventCircle"></span></span>
                     </td>
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
+                    <td id="div26" ondrop="drop(event)" ondragover="allowDrop(event)">23</td>
+                    <td id="div27" ondrop="drop(event)" ondragover="allowDrop(event)">24</td>
+                    <td id="div28" ondrop="drop(event)" ondragover="allowDrop(event)">25</td>
                   </tr>
+
                   <tr> <!--Row 5 of the calendar-->
-                    <td>
-                      <span class="day_active">26</span>
+                    <td id="div29" ondrop="drop(event)" ondragover="allowDrop(event)">26</td>
+                    <td id="div30" ondrop="drop(event)" ondragover="allowDrop(event)">27</td>
+                    <td id="div31" ondrop="drop(event)" ondragover="allowDrop(event)">
+                      <span class="day_active">28</span>
+                      <span class="fyi_event" draggable="true" ondragstart="drag(event)" id="drag18">Intel Brief<span class="eventCircle"></span></span>
+                      <span class="mandatory_event" draggable="true" ondragstart="drag(event)" id="drag19">Cmdrs Update<span class="eventCircle"></span></span>
                     </td>
-                    <td>27</td>
-                    <td>28
-                      <span class="fyi_event">Intel Brief<span class="eventCircle"></span></span>
-                      <span class="mandatory_event">Cmdrs Update<span class="eventCircle"></span></span>
+                    <td id="div32" ondrop="drop(event)" ondragover="allowDrop(event)">29
+                      <span class="special_event" draggable="true" ondragstart="drag(event)" id="drag20">DRRS-MC<span class="eventCircle"></span></span>
                     </td>
-                    <td>29
-                      <span class="special_event">DRRS-MC<span class="eventCircle"></span></span>
-                    </td>
-                    <td>30</td>
-                    <td class="calendar_empty">1</td>
-                    <td class="calendar_empty">2</td>
+                    <td id="div33" ondrop="drop(event)" ondragover="allowDrop(event)">30</td>
+                    <td  id="div34" ondrop="drop(event)" ondragover="allowDrop(event)" class="calendar_empty">1</td>
+                    <td  id="div35" ondrop="drop(event)" ondragover="allowDrop(event)" class="calendar_empty">2</td>
                   </tr>
                 </tbody>
-              </table>
+        </table>
 
-              <button class="addEvent_btn" onclick="openForm()">Add Event</button>
+        <button class="addEvent_btn" onclick="openForm()">Add Event</button>
 
-              <div class="form-popup" id="event_formPopup">
-            <form action="/action_page.php" class="form-container">
-              <header class="form_header">Enter New Event</header>
+        <div class="form-popup" id="event_formPopup">
+                  <form action="/action_page.php" class="form-container">
+                    <header class="form_header">Enter New Event</header>
           
-              <label><b>Event Short Name</b></label>
-              <input type="text" style="width: 100px;" placeholder="Enter Short Name" name="short_name"  maxlength="14" autofocus required>
+                      <label><b>Event Short Name</b></label>
+                      <input type="text" style="width: 100px;" placeholder="Enter Short Name" name="short_name"  maxlength="14" autofocus required>
   
-              <label><br><b>Event Long Name</b></label>
-              <input type="text" style="width: 250px;" placeholder="Enter Long Name" name="long_name"  maxlength="34" required><br>
+                      <label><br><b>Event Long Name</b></label>
+                      <input type="text" style="width: 250px;" placeholder="Enter Long Name" name="long_name"  maxlength="34" required><br>
   
-              <label><b>Start Date</b></label>
-              <input type="date" name="start_date" required>
+                      <label><b>Start Date</b></label>
+                        <input type="date" name="start_date" required>
               
-              <label><b>Time</b></label>
-              <input type="time" name="start_time" required><br>
+                        <label><b>Time</b></label>
+                        <input type="time" name="start_time" required><br>
   
-              <label><b>End Date</b></label>
-              <input type="date" name="end_date" required>
+                        <label><b>End Date</b></label>
+                        <input type="date" name="end_date" required>
               
-              <label><b>Time</b></label>
-              <input type="time" name="end_time" required><br>
+                        <label><b>Time</b></label>
+                        <input type="time" name="end_time" required><br>
   
-              <label><b>Category</b></label>
-              <input type="text" name="category" required><br>
+                        <label><b>Category</b></label>
+                        <input type="text" name="category" required><br>
   
-              <label><b>Description</b></label>
-              <input type="text" name="description"><br>
-  
-  
-              <div class="formFooter_btns">
-                <button type="submit" class="btn">Submit</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-              </div>
-            </form>
-          </div>
+                        <label><b>Description</b></label>
+                        <input type="text" name="description"><br>
+
+                        <div class="formFooter_btns">
+                          <button type="submit" class="btn">Submit</button>
+                          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                        </div>
+                  </form>
         </div>
-      </section>
-        <div class="flexbox_right">
-            <p> Here will go unit tasks</p>
-        </div>
+      </div>
+
+    <div class="flexbox_right">
+      <table class="today_schedule" id="today_schedule">
+        <th colspan="2" class="today_header1">Planned</th>
+        <th colspan="2" class="today_header1">Actual</th>
+        <tr>
+          <th>Time</th>
+          <th>Event</th>
+          <th>Time</th>
+          <th>Event</th>
+        </tr>
+      </table>
     </div>
+    </section>
+  </div>
 </main>
+
+<!-- Script to get Day in each table cell-->
+<script>
+
+var d = new Date();
+document.getElementById("div_day_1").innerHTML = d.getDate();
+
+</script>
+
+
 
 </body>
 
